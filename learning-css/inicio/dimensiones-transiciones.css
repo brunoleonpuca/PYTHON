@@ -1,0 +1,50 @@
+body{
+    background-color: #eee;
+}
+
+.box2d{
+    width: 100px;
+    height: 100px;
+    position: relative; /*con left y top permite mover la box segun se desee*/
+    left: 50px;
+    top: 50px;
+    background-color: white;
+    box-shadow: 1px 2px 2px rgba(0,0,0,0.4);
+    /*transform: rotate(20deg); Gira la box rotate(-20deg)*/
+    /*transform: translate(50px, 100px); desplaza la box hacia los parametros que se les da*/
+    /*transform: scale(2, 2); agranda o disminuye la box a partir de los parametros*/
+    /*transform: scaleY(1.05); modifica la altura*/
+    /*transform: scaleX(1.05); modifica el largo*/
+    /*transform: skewX(25deg); acuesta a la box, mantiene los laterales Y paralelos*/
+    /*transform: skewY(25deg); modifica la inclinacion, mantiene los laterales X paralelos*/
+    transform: skew(25deg, 25deg); /*acuesta e inclina a la box a partir de los parametros*/
+}
+
+.box2d:hover{
+    transform: scale(1.05, 1.05); /*Da la sensacion que al poner el mouse encima es clickeable, agranda la box apenas*/
+}
+
+.box3d{
+    background-color: white;
+    position: relative;
+    left: 50px;
+    top: 150px;
+    width: 100px;
+    height: 100px;
+    box-shadow: 1px 2px 2px rgba(0,0,0,0.4);
+
+    /*transform: rotateX(60deg); modifica la profundidad*/
+    /*transform: rotateY(60deg);*/
+    /*transform: rotateZ(60deg); rota exactamente igual que rotate comun*/
+
+    /*transition: width 0.3s; aumenta el tamaño del largo de la caja*/
+    transition: 0.3s; /*si no se agrega ninguna propiedad de cambio, se toman las que aparecen con el selector:evento dado*/
+    /*transition: 0.3s 0.5s; las transiciones van a ir de a->b con 0.3s y de b->a con 0.5s*/
+    transition-delay: 0.5s; /*para agregar un delay antes y despues del evento*/
+}
+
+.box3d:hover{ /*transition toma los valores de aca para transformar el objeto*/
+    width: 150px; 
+    transform: scale(1.05, 1.05);
+    background-color: rgba(0,0,0,0.2);
+}

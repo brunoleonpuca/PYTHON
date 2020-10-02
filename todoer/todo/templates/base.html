@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <title>
+        {% block title %}{% endblock %} - Lista de tareas
+    </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <div class="grid">
+        <section class="main-head">
+            <h1>Lista de tareas</h1>
+            <nav class="main-nav">
+                <ul>
+                    {% if g.user %} <!-- Si en la variable g se encuentra el usuario, es decir ya hizo el logeo -->
+                        <div>Usuario logeado:
+                            <li><span>{{ g.user['username'] }}</span></li>
+                        </div>
+                        <li><a href="{{ url_for('auth.logout') }}">Cerrrar sesion</a></li>
+                    {% else %}
+                    <div>No hay ningun usuario logeado</div>
+                    <li><a href="{{ url_for('auth.register') }}">Registrarse</a></li>
+                    <li><a href="{{ url_for('auth.login') }}">Iniciar sesion</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </section>
+        <section class="content">
+            <header>
+                {% block header %}{% endblock %}
+            </header>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% for category, message in messages %}
+                    <div class="flash {{ category }}">{{ message }}</div>
+                    <br/>
+                {% endfor %}
+            {% endwith %}
+            {% block content %}{% endblock %}
+        </section>
+        <label class="footer">Created by Bruno Pucarelli</label>
+    </div>
+</html>

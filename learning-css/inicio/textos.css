@@ -1,0 +1,50 @@
+body{
+    background-color: white;
+}
+
+p{ /*modifica todos los parrafos dentro del html*/
+    color:darkviolet;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: oblique;
+    font-size: 20px;
+    font-weight: 100;    
+    text-align: left;
+    text-indent: 10px; /*sangria*/
+    line-height: 1.7; /*separacion del alto por linea del parrafo*/
+    word-spacing: 10px;
+    text-shadow: 3px 2px 7px darkblue; /*le agrega sombra a las letras. queda piola*/
+}
+
+a{ /*modifica todos los links dentro del html*/
+    text-decoration: underline; /*permite agregarle el subrayado al link*/
+    color: hotpink; /*color generico*/
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    background-color: darkviolet;
+    padding: 15px;
+    margin: 25px;
+    border: solid 1px;
+    border-radius: 10px;
+    border-color: violet;
+}
+
+a:link{ /*color no generico de los links*/
+    color: pink;
+    text-decoration: none;
+}
+
+a:visited{ /*si el link ya fue visitado*/
+    color: blue;
+}
+
+a:hover{ /*si el mouse esta encima del link*/
+    color:green;
+    text-decoration: underline;
+    background-color: violet;
+}
+
+a:active{ /*al presionar el link*/
+    color: red;
+    background-color: brown;
+}
+

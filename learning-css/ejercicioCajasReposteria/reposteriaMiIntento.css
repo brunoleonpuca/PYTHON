@@ -1,0 +1,66 @@
+body{
+    background-color: rgb(218, 218, 218);
+}
+
+.red-button{
+    padding: 10px;
+    margin: 10px;
+    background-color: #eee;
+    width: 230px;
+    height: 30px;
+    line-height: 30px; /*igual que height para que con vertical-align quede centrado*/
+    border-width: 1px;
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 1px 2px 2px rgba(0,0,0,0.4);
+    border-left: solid 3px red;
+
+    transition: 0.5s;
+}
+
+.red-button:hover{
+    /*background-color: rgba(0, 0, 0, 0.1);*/
+    transform: scale(1.05, 1.05)
+}
+
+.green-button{
+    padding: 10px;
+    margin: 10px;
+    background-color: #eee;
+    width: 230px;
+    height: 30px;
+    line-height: 30px;
+    border-width: 1px;
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 1px 2px 2px rgba(0,0,0,0.4);
+    border-left: solid 3px green;
+
+    transition: 0.5s;
+}
+
+.green-button:hover{
+    /*background-color: rgba(0, 0, 0, 0.1);*/
+    box-shadow: 2px 4px 2px rgba(0,0,0,0.4);
+}
+
+.blue-button{
+    padding: 10px;
+    margin: 10px;
+    background-color: #eee;
+    width: 230px;
+    height: 30px;
+    line-height: 30px;
+    border-width: 1px;
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 1px 2px 2px rgba(0,0,0,0.4);
+    border-left: solid 3px blue;
+
+    transition: 0.5s;
+}
+
+.blue-button:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+    /*transform: scale(1.05, 1.05)*/
+}

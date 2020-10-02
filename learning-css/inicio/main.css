@@ -1,0 +1,25 @@
+body{
+    background-color:#2ac08e; /*color para la base de la pagina*/
+}
+
+#parrafo{
+    color: #a51b1b; /*cambiar el color segun un ID #*/
+}
+
+.etiqueta{
+    color: #1212c7; /*cambiar el color segun una CLASS .*/
+}
+
+.caja{ /*cambiar cada una de las caracteristicas, segun la class 'caja'*/
+    margin: 10px; /*distancia del margen*/
+    padding: 10px; /*distancia del padding*/
+    border-style: dotted; /*estilo del borde, se puede combinar como "dotted dashed solid double"*/
+    border-width: 8px;
+    border-color: purple;
+    border-left: 15px solid slateblue; /*si se pisan propiedades, prevalece la ultima, no produce error*/
+    border-radius: 15px; /*radio de las esquinas, mayores px mayor redondeo*/    
+    background-color: dodgerblue; /*color de fondo del padding*/
+    height: 100px; /*altura de caja*/
+    width: 100px; /*ancho de caja*/
+    color: magenta; /*color del texto*/
+}

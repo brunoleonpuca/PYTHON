@@ -1,0 +1,36 @@
+body{
+    background-color: #eee;
+}
+
+table{
+    background-color: white;
+    width: 100%; /*la tabla va a ocupar el 100% de la pagina*/
+    border-collapse: collapse; /*los bordes entre columnas van a desaparecer*/
+}
+
+tr:nth-child(even){ /*selector para seleccionar 1 fila si y otra no, 1 si y otra no, etc*/
+    background-color: indianred;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+tr:nth-child(odd){ /*selector para seleccionar las 2das filas no seleccionadas en el "even"*/
+    background-color: lightcoral;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+td{
+    border: 1px solid #ddd; /*se le agrega un pequeño borde por cada celda del contenido*/
+    padding: 8px;
+}
+
+table th{
+    background-color: orange;
+    color: darkred;
+    border: 1px solid #ddd;
+    text-align: left;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 1.5em;
+}

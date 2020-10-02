@@ -1,0 +1,31 @@
+body {
+    background-color: #eee;
+}
+
+.flex {
+    display: flex;
+    /*flex-direction: column; posicion de la flexbox*/
+    /*flex-wrap: wrap; si la flexbox permite o no el ajuste de elementos segun el largo*/
+    flex-flow: row wrap; /*recibe los 2 valores de las propiedades de arriba*/
+    height: 200px;
+    /*justify-content: space-evenly;
+    align-items: stretch;
+    align-content: space-evenly;*/
+}
+
+.primero {
+    order: 3; /*el orden segun la posicion que se desee de cada elemento*/
+    flex-grow: 1; /*utiliza el tamaño de la flexbox*/
+}
+
+.segundo {
+    order: -1;
+    /*flex-grow: 1;
+    flex-basis: 120px; ancho inicial del elemento*/
+    flex: 1 120px; /*recibe los 2 valores de las propiedades de arriba*/
+    align-self: center;
+}
+
+.tercero {
+    flex-grow: 2;
+}

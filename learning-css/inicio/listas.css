@@ -1,0 +1,18 @@
+body{
+    background-color: white;
+}
+
+ul /*li*/{ /*ul es el componente y li cada uno de los elementos "ul li"->modifica cada uno de los elementos por separado "ul"->modifica el bloque de elementos*/
+    list-style-type: none; /*le cambia el estilo a la puntuacion de cada uno de los elementos*/
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #eee;
+    border: solid 1px #ddd;
+    border-radius: 4px;
+    padding-left: 0px;
+    text-align: center;
+}
+
+li {
+    border-bottom: solid 1px #ddd;
+    padding: 15px;
+}

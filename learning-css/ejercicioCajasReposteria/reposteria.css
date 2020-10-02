@@ -1,0 +1,41 @@
+/*El flaco lo que hace es primero crear las 3 cajas iguales en un mismo selector y despues divide el comportamiento*/
+
+body{
+    background-color: rgb(218, 218, 218);
+}
+
+div {
+    background-color: white;
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.2);
+    margin: 10px 15px;
+    width: 200px;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.red-button {
+    border-left: solid 2px red;
+    transition: 0.3s;
+}
+
+.red-button:hover {
+    transform: scale(1.05, 1.05)
+}
+
+.green-button {
+    border-left: solid 2px green;
+    transition: 0.3s;
+}
+
+.green-button:hover {
+    box-shadow: 1px 4px 2px rgba(0,0,0,0.4);
+}
+
+.blue-button {
+    border-left: solid 2px blue;
+    transition: 0.3s;
+}
+
+.blue-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}

@@ -1,0 +1,24 @@
+body{
+    background-color: #eee;
+}
+
+#overflow{
+    background-color: #fff;
+    width: 100px; /*se le da un ancho fijo para que quede todo junto*/
+    height: 100px; /*creamos un cuadrado*/
+    overflow: scroll; /*visible;->por defecto, hidden;->contenido que no entra, se esconde, scroll;->agrega la barra para scrollear*/
+                        /*auto;-> le agrega el scroll unicamente si lo necesita*/
+}
+
+img{
+    float:right; /*todas las imagenes deben flotar hacia donde se indica, se coloca en algun espacio disponible*/
+    opacity: 1; /*0-> invisible, 1-> visible, valores en medio cambian la opacidaad*/
+}
+
+img:hover{
+    opacity: 0.5;
+}
+
+div p{ /*va a modificar unicamente los paragrafos que esten dentro de un div, los parrafos restantes no! (combinacion de selectores)*/
+    color: red;
+}

@@ -1,0 +1,159 @@
+/* CTRL-SHIFT-R para ver los cambios aplicados en el Browser */
+html body {
+    background-color: #eee;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    grid-gap: 5px;
+}
+
+.main-head {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    top: 0px;
+    width: 100%;
+    left: 0px;
+    background-color: #333;
+    grid-column: 1 / 5;
+    grid-row: 1;
+    justify-content: space-around;
+    
+    text-align: center;
+    text-shadow: 4px 4px 1px rgba(0, 0, 0, 0.2);
+    text-decoration: underline;
+    
+    color: rgba(97, 165, 243, 0.959);
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.main-nav {
+    display: flex;
+    flex-flow: row wrap;
+    grid-column: 1 / 5;
+    grid-row: 1;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.main-nav ul {
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.main-nav ul span {
+    color: rgb(255, 255, 255);
+}
+
+.main-nav ul a {
+    color: rgba(117, 0, 250, 0.637);
+}
+
+.content h1 {
+    text-align: center;
+    text-shadow: 4px 4px 1px rgba(0, 0, 0, 0.2);
+    text-decoration: underline;
+}
+
+.content {
+    background-color: deepskyblue;
+    grid-area: 2 / 1 / 4 / 5;
+    width: 100%;
+    min-height: 360px;
+}
+
+.content ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: flex-start;
+}
+
+.content ul li {
+    background-color: white;
+    box-shadow: 4px 4px 2px rgba(0,0,0,0.5);
+
+    width: 15%;
+    margin: 10px 15px;
+    padding: 15px;
+
+    list-style: none;
+    
+    border: 2px solid rgba(47, 49, 212, 0.74);
+    border-radius: 25px;
+
+    transition: 0.5s;
+}
+
+.content ul li:hover{
+    transform: scale(1.05, 1.05);
+}
+
+.content ul li div {
+    display: grid;
+}
+
+.content form {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 20px 80px;
+    justify-content: space-evenly;
+}
+
+.content form .description{
+    resize: none;
+}
+
+.content form .completed {
+    position: relative;
+    left: 100px;
+}
+
+#completed{
+    left: 130px;
+}
+
+.nueva-tarea {
+    display: grid;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.about-box {
+    flex: 0 1 auto;
+    align-self: flex-end;
+    font-size: small;
+}
+
+.flash.error {
+    background-color: rgba(0, 0, 255, 0.561);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.footer {
+    background-color: teal;
+    width: 100%;
+
+    font-family: monospace;
+    font-size: smaller;
+    text-align: end;
+
+    grid-area: 4 / 1 / 4 / 5;
+}

@@ -1,0 +1,41 @@
+body{
+    background-color: #eee;
+}
+
+.box{
+    background-color: white;
+    padding: 12px 20px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px mediumaquamarine;
+}
+
+input[type="text"]{ /*se seleccionan todos los inputs de tipo text, en este caso*/
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"]{
+    width: 100%;
+    background-color: lightseagreen;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}

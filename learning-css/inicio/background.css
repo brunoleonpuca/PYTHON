@@ -1,0 +1,28 @@
+body{
+    background-color: #eee;
+}
+
+.fondo {
+    /*height: 300px;*/
+    background: green url('http://placekitten.com/200/300') no-repeat left top fixed; 
+    /* background-color: rgba(255, 255, 255, 0.842) /*se puede utilizar los nombre en ingles red, yellow, blue, black, etc;
+    background-image: url('http://placekitten.com/200/300'); /*la imagen va a tomar el largo completo del div (en este caso)
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-attachment: fixed;*/
+    background-size: cover;
+}
+
+.fondo-degrade{
+    background-image: linear-gradient(to left, red, blue); /*(direccion[to right], color1[red], color2[blue])*/
+    /*background-image: repeating-linear-gradient(0deg, rgba(255,0,0,0.1) 10%, blue 20%); permite crear el patron de degrade a lo largo del background*/
+}
+
+.box {
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.5) inset; /*sombradoInferior, sombradoLateral, esparcimiento y difuminado, color, posicionDeSombreado*/
+}
+
+.text {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /*mismos parametros que box-shadow*/
+}

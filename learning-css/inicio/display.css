@@ -1,0 +1,27 @@
+body{
+    background-color: white;
+}
+
+#maxWidth{
+    background-color: grey;
+    color: white;
+    max-width: 350px; /*el ancho es dinamico, si se recuadra el navegador, no va a tener scroll horizontal a diferencia del width comun*/
+    margin: auto; /*se va a centrar en el centro de la pagina con auto*/
+    /*position: relative;propiedad por defecto es static, relative permite que con las props de debajo se moveria con precision*/
+    position:fixed; /*queda siempre visible*/
+    right: 15px;
+    top: 0px;
+    bottom: 0px;
+}
+
+#divInvisible{
+    display: none;
+}
+
+p{ 
+    display: block; /*permite pasar del display bloque al inline y visceversa*/
+}
+
+span{
+    display: block;
+}

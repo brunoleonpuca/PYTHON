@@ -1,0 +1,9 @@
+<!-- PLANTILLA HIJO -->
+{% extends 'base.html' %} <!-- Hace referencia a plantilla padre -->
+<!-- Agarra el bloque de 'title' y reemplaza en base.html -->
+{% block title %} 
+    Mensaje
+{% endblock %}
+{% block content %} <!-- Agarra el bloque de 'content' y reemplaza en base.html -->
+    <h1>{{ mensaje }}</h1>
+{% endblock %}

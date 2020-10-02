@@ -1,0 +1,12 @@
+<!-- PLANTILLA PADRE -->
+<!DOCTYPE html>
+<title>{% block title %}{% endblock %}</title> <!-- creamos etiqueta de bloque con nombre 'title' desde donde, con una plantilla hijo, se lo modifica-->
+<link rel="stylesheet" href="{{ url_for("static", filename="style.css") }}"/> <!-- incluimos un archivo de css 'style.css' dentro de la carpeta 'static' -->
+<body>
+    <nav> 
+        <h1>Titulo</h1>
+    </nav>
+    <section class="Content">
+        {% block content %}{% endblock %} <!-- creamos otra etiqueta de bloque con nombre 'content' -->
+    </section>
+</body>

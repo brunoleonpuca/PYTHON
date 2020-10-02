@@ -1,0 +1,43 @@
+body {
+    background-color: #eee;
+}
+
+.grid {
+    display: grid; /*Con estan opcion habilitamos la grilla. Todos los elementos que contienen, se van a desplegar como si estuvieran en una misma columna*/
+    /*display: inline-grid; Con esta opcion se habilita la grilla, pero el ancho va a ser tan mayor como el largo del elemento de mayor tamaño*/
+    
+    /*grid-template-rows: 50px 100px; se define la altura de cada fila: 1ra fila->50px, 2da fila->100px, etc*/
+    /*grid-template-rows: minmax(100px, auto); el tamaño minimo seria 100px y el tamaño maximo segun el tamaño del elemento*/
+    /*grid-template-rows: repeat(2, 50px); cuantas filas y el largo de las mismas*/
+    /*grid-template-rows: [row-1-inicio] 50px [row-2-inicio] 50px [row-3-fin]; tendriamos 2 filas con el mismo nombre inicio y les haremos referencia abajo*/
+    grid-template-rows: repeat(2, [row-inicio] 50px [row-fin]); /*automatizamos lo de arriba de esta manera*/
+    /*grid-row-gap: 20px; espacio entre las filas*/
+    
+    /*grid-template-columns: 90px 50px 120px; se define n°px=n°columnas*/
+    /*grid-template-columns: minmax(auto, 50%) 1fr 3em;*/
+    /*grid-template-columns: 1fr 2fr 3fr usa todo el ancho y lo divide segun la fraccion que se le indique*/
+    /*grid-template-columns: repeat(3, 1fr); cuantas columnas y el ancho de las mismas*/
+    /*grid-template-columns: [col-1-inicio] 1fr [col-2-inicio] 1fr [col-3-inicio] 1fr [col-4-fin]; tendriamos 4 columnas con 2 nombres distintos y les hacemos referencia abajo*/
+    grid-template-columns: repeat(3, [col-inicio] 1fr [col-fin]);
+    /*grid-column-gap: 20px; espacio entre las columnas*/
+    
+    /*grid-gap: 20px 10px el 1ero es para las filas y el 2do para las columnas. Si queremos el mismo valor, ponemos solo 1: "15px"*/
+    grid-gap: 15px;
+
+}
+
+.element {
+    background-color: rgba(255, 0, 0, 0.308);
+}
+
+.header {
+    /*grid-column-start: 1; columna en la cual empieza el elemento, en este caso header*/
+    /*grid-column-end: 4; columna en la cual termina el elemento, en este caso header*/
+    /*grid-row-start: 1; lo mismo que las columnas para las filas*/
+    /*grid-row-end: 3;*/
+    /*mismo resultado que el anterior con lo siguiente:*/
+    /*grid-column: 1 / 6;
+    grid-row: 1 / 3;*/
+    grid-column: col-inicio / col-fin 3; /*utilizamos los nombres que definimos arriba*/
+    grid-row: row-inicio / row-fin 3;
+}

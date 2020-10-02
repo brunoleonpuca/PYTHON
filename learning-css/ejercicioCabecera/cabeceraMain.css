@@ -1,0 +1,33 @@
+body{
+    background-color: lightgray;
+}
+
+.cajaPrincipal{
+    background-color: lightseagreen;
+    border-width: 1px;
+    border-radius: 4px;
+}
+
+.caja{
+    padding: 8px;
+    background-color: white;
+    border: lightgray;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    border-top: solid 0px;
+}
+
+#botonAceptar{
+    background-color: deepskyblue;
+    border-style: none;
+    padding: 5px;
+    color: white;
+}
+
+#botonCancelar{
+    background-color: gray;
+    border-style: none;
+    padding: 5px;
+    color: white;
+}
