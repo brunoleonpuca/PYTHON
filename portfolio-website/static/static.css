@@ -403,11 +403,11 @@ header {
     }
 }
 
-/* ---------------- WORK SECTION ---------------- */
+/* ---------------- PLANTEL SECTION ---------------- */
 
 .my-work {
     position: relative;
-    background-image: linear-gradient(rgba(48, 0, 0, 0.3), rgba(48, 0, 0, 0.95)),url(plantel-background.jpg);
+    background-image: linear-gradient(to right top, rgba(48, 0, 0, 0.9), rgba(48, 0, 0, 0.3)),url(plantel-background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
