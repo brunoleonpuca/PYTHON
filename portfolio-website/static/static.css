@@ -40,6 +40,10 @@
 
 /* ---------------- GENERAL STYLES ---------------- */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     /* background: rgba(0, 0, 0, 0.37); */
     background: linear-gradient(rgb(48, 0, 0), rgb(54, 1, 1));
@@ -220,8 +224,24 @@ header {
     background-color: rgba(255, 0, 0, 0.699);
 }
 
-.nav-open {
-    background: red;
+.nav-open .nav {
+    transform: translateX(0);
+}
+
+.nav-open .nav-toggle {
+    position: fixed;
+}
+
+.nav-open .hamburger {
+    transform: rotate(.625turn);
+}
+
+.nav-open .hamburger::before {
+    transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger::after {
+    opacity: 0;
 }
 
 
