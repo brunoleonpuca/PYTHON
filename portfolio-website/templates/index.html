@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for("static", filename="static.css") }}"/>
+    <script src="https://kit.fontawesome.com/ea40a1a9cd.js" crossorigin="anonymous"></script>
+    <title>Portfolio website - River Plate</title>
+</head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="/static/logo-river01.png" alt="logo-river" class="logo__img">
+            </div>
+            <button class="nav-toggle" aria-label="toogle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">Logros</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">Autoridades</a></li>
+                    <li class="nav__item"><a href="#work" class="nav__link">Plantel titular</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- INTRO - HOME - HISTORIA -->
+        <section class="intro" id="home">
+            <h1 class="section__title section__title--intro">
+                Club Atletico <strong>River Plate</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">Haciendo historia desde el 25 de mayo de 1901</p>
+            <img src="static/logo-river02.png" alt="monumental" class="intro__img">
+        </section> <!-- / INTRO - HOME - HISTORIA -->
+        
+        <!-- LOGROS -->
+        <section class="my-services" id="services">
+            <h2 class="section__title section__title--services">Logros</h2>
+            <div class="services">
+                <div class="service">
+                    <h3>Nacionales</h3>
+                    <h4>Primera Division</h4>
+                    <p>1920, 1932, C. Campeonato 1936,97​ C. de Oro 1936, 1937, 1941, 1942, 1945, 1947, 1952, 
+                    1953, 1955, 1956, 1957, M/1975, N/1975, M/1977, M/1979, N/1979, M/1980, N/1981, 1985-86, 
+                    1989-90, A/1991, A/1993, A/1994, A/1996, C/1997, A/1997, A/1999, C/2000, C/2002, C/2003, 
+                    C/2004, C/2008, F/2014. (Récord).</p>
+                    <h4>Copa Argentina</h4>
+                    <p>2015-16, 2016-17, 2018-19. (Récord compartido).</p>
+                </div>
+                <div class="service">
+                    <h3>Internacionales</h3>
+                    <h4>Copa Libertadores</h4>
+                    <p>2015-16, 2016-17, 2018-19. (Récord compartido).</p>
+                    <h4>Copa Sudamericana</h4>
+                    <p>2014.</p>
+                    <h4>Recopa Sudamericana</h4>
+                    <p>2015, 2016, 2019.</p>
+                    <h4>Mundial de Clubes</h4>
+                    <p>1986</p>
+                </div>
+                <div class="service">
+                    <h3>Distinciones</h3>
+                    <p>Mejor racha de partidos marcando: 96 partidos (1936-1939) Récord mundial absoluto</p>
+                    <p>Incluye un total de 66 títulos oficiales, los cuales se conforman de 36 campeonatos de Primera División, 12 copas nacionales, convirtiendolo en el maximo ganador de Argentina y 18 copas internacionales</p>
+                </div>
+            </div>
+
+            <a href="#work" class="btn">Ir al plantel profesional</a>
+        </section> <!-- / LOGROS -->
+        
+        <!-- AUTORIDADES -->
+        <section class="about-me" id="about">
+            <h2 class="section__title section__title--about">Responsable del presente: </h2>
+            <p class="section__subtitle section__subtitle--about">Marcelo "Muñeco" Gallardo</p>
+            <div class="about-me__body">
+                <p>“River viene de conseguir algo muy importante y nosotros tenemos que redoblar la apuesta. Tenemos que ir por más. Volver a esos primeros lugares”.<br><br>
+                    Con esa frase, Marcelo Gallardo dejaba en claro en su presentación oficial como nuevo director técnico de River que dentro de su cabeza ya craneaba un ambicioso proyecto. Desde ese 6 de junio de 2014 a la fecha, el Muñeco cumplió 
+                    con creces sus palabras y agigantó las vitrinas de la institución: conquistó <b>tres Copas Argentina, una Supercopa Argentina (se impuso a su clásico rival en Mendoza), dos Copas Libertadores (en ambas eliminó al Xeneize), una Copa 
+                        Sudamericana (también dejó en el camino a los de La Ribera), tres Recopas Sudamericanas y una Suruga Bank.</b>
+                    Pero estos títulos no son obra de la suerte (algo que debe acompañar a todo exitoso deportista) o mera casualidad. <br><br> El éxito que hoy disfrutan en Núñez tiene una razón de ser, un nombre, el de Marcelo Daniel Gallardo.</p>
+            </div>
+
+            <img src="static/gallardo01.jpg" alt="gallardo01" class="about__img">
+        </section> <!-- / AUTORIDADES -->
+
+        <!-- PLANTEL -->
+        <section class="my-work" id="work">
+            <h2 class="section__title">Plantel Profesional</h2>
+            <div class="plantel">
+                <!--items del plantel-->
+                <a href="#" class="plantel__item plantel__item--arquero">
+                    <img src="static/plantel/ARMANI.png" alt="armani" class="plantel__img">
+                    <div class="player__info">
+                        Nombre: Franco ARMANI<br>
+                        Nacionalidad: Argentina <br>
+                        Altura: 1.90 m<br>
+                        Pie habil: Derecha<br>
+                        Edad: 33<br>
+                        Posicion: Arquero (1)
+                    </div>
+                </a>
+
+                <a href="#" class="plantel__item plantel__item--defensor">
+                    <img src="static/plantel/MONTIEL.png" alt="montiel" class="plantel__img">
+                    <div class="player__info">
+                        Nombre: Gonzalo MONTIEL<br>
+                        Nacionalidad: Argentina <br>
+                        Altura: 1.75 m<br>
+                        Pie habil: Derecha<br>
+                        Edad: 23<br>
+                        Posicion: Defensa (29) 
+                    </div>
+                </a>
+
+                <a href="#" class="plantel__item plantel__item--defensor">
+                    <img src="static/plantel/PINOLA.png" alt="pinola" class="plantel__img">
+                    <div class="player__info">
+                        Nombre: Javier PINOLA<br>
+                        Nacionalidad: Argentina <br>
+                        Altura: 1.80 m<br>
+                        Pie habil: Izquierda<br>
+                        Edad: 37<br>
+                        Posicion: Defensa (22)
+                    </div>
+                </a>
+
+                <a href="#" class="plantel__item plantel__item--defensor">
+                    <img src="static/plantel/MQ.png" alt="mq" class="plantel__img">
+                    <div class="player__info">
+                        Nombre: Lucas MARTINEZ QUARTA<br>
+                        Nacionalidad: Argentina <br>
+                        Altura: 1.83 m<br>
+                        Pie habil: Derecha<br>
+                        Edad: 24<br>
+                        Posicion: Defensa (28) 
+                    </div>
+                </a>
+
+                <a href="#" class="plantel__item plantel__item--defensor">
+                    <img src="static/plantel/CASCO.png" alt="casco" class="plantel__img">
+                    <div class="player__info">
+                        Nombre: Milton CASCO<br>
+                        Nacionalidad: Argentina <br>
+                        Altura: 1.83 m<br>
+                        Pie habil: Derecha<br>
+                        Edad: 32<br>
+                        Posicion: Defensa (20) 
+                    </div>
+                </a>
+
+                <a href="#" class="plantel__item plantel__item--medio">
+                    <img src="static/plantel/NACHO.png" alt="nacho" class="plantel__img">
+                    <div class="player__info">
+                        Nombre: Ignacio FERNANDEZ<br>
+                        Nacionalidad: Argentina <br>
+                        Altura: 1.82 m<br>
+                        Pie habil: Izquierda<br>
+                        Edad: 30<br>
+                        Posicion: Mediocampista (26) 
+                    </div>
+                </a>
+
+                <a href="#" class="plantel__item plantel__item--medio">
+                    <img src="static/plantel/ENZO.png" alt="enzo" class="plantel__img">
+                    <div class="player__info">
+                        Nombre: Enzo PEREZ<br>
+                        Nacionalidad: Argentina <br>
+                        Altura: 1.78 m<br>
+                        Pie habil: Derecha<br>
+                        Edad: 34<br>
+                        Posicion: Mediocampista (24) 
+                    </div>
+                </a>
+
+                <a href="#" class="plantel__item plantel__item--medio">
+                    <img src="static/plantel/DLC.png" alt="dlc" class="plantel__img">
+                    <div class="player__info">
+                        Nombre: Nicolas DE LA CRUZ<br>
+                        Nacionalidad: Uruguay <br>
+                        Altura: 1.67 m<br>
+                        Pie habil: Derecha<br>
+                        Edad: 23<br>
+                        Posicion: Mediocampista (11) 
+                    </div>
+                </a>
+
+                <a href="#" class="plantel__item plantel__item--delantero">
+                    <img src="static/plantel/SUAREZ.png" alt="suarez" class="plantel__img">
+                    <div class="player__info">
+                        Nombre: Matias Ezequiel SUAREZ<br>
+                        Nacionalidad: Argentina <br>
+                        Altura: 1.83 m<br>
+                        Pie habil: Derecha<br>
+                        Edad: 32<br>
+                        Posicion: Delantero (7) 
+                    </div>
+                </a>
+
+                <a href="#" class="plantel__item plantel__item--delantero">
+                    <img src="static/plantel/BORRE.png" alt="borre" class="plantel__img">
+                    <div class="player__info">
+                        Nombre: Rafael Santos BORRE<br>
+                        Nacionalidad: Colombia <br>
+                        Altura: 1.75 m<br>
+                        Pie habil: Derecha<br>
+                        Edad: 25<br>
+                        Posicion: Delantero (19) 
+                    </div>
+                </a>
+
+                <a href="#" class="plantel__item plantel__item--delantero">
+                    <img src="static/plantel/ALVAREZ.png" alt="alvaarez" class="plantel__img">
+                    <div class="player__info">
+                        Nombre: Julian ALVAREZ<br>
+                        Nacionalidad: Argentina <br>
+                        Altura: 1.70 m<br>
+                        Pie habil: Derecha<br>
+                        Edad: 20<br>
+                        Posicion: Delantero (9) 
+                    </div>
+                </a>
+            </div>
+        </section> <!-- / PLANTEL -->
+
+        <!-- FOOTER - REDES SOCIALES RIVER -->
+        <footer class="footer">
+            <a href="brunopuca1@gmail.com" class="footer__link">My Email</a>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link" 
+                    href="https://www.facebook.com/riverplateoficial/" target="_blank">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" 
+                    href="https://twitter.com/@RiverPlate/" target="_blank">
+                    <i class="fab fa-twitter-square"></i>
+                </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" 
+                    href="https://www.instagram.com/riverplate/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" 
+                    href="https://www.youtube.com/user/cariverplatetv/" target="_blank">
+                    <i class="fab fa-youtube-square"></i>
+                </a>
+                </li>
+            </ul>
+        </footer> <!-- / FOOTER - REDES SOCIALES RIVER -->
+
+    </body>
+</html>
