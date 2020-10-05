@@ -7,8 +7,8 @@
 /* ---------------- CUSTOM PROPERTIES ---------------- */
 
 :root{
-    --ff-primary: "font-family:";
-    --ff-secondary: "monospace";
+    --ff-primary: 'Open Sans', sans-serif;
+    --ff-secondary: 'Epilogue', sans-serif;
 
     --fw-reg: 300;
     --fw-bold: 900;
@@ -28,13 +28,13 @@
     --bs: 0.25em 0.25em 1em rgba(0, 0, 0, 0.600);
 }
 
-@media (min-width:900px) {
+@media (min-width:1100px) {
     :root {
-        --fs-h1: 4.5rem;
+        --fs-h1: 5.5rem;
         --fs-h2: 3.75rem;
         --fs-h3: 2.5rem;
         --fs-h4: 1.7rem;
-        --fs-body: 1.125rem;
+        --fs-body: 1.3rem;
     }
 }
 
@@ -106,7 +106,6 @@ h4 { font-size: var(--fs-h4) }
 .section__title--intro {
     margin-top: 40px;
     font-weight: var(--fw-reg);
-    font-size: 3em;
     text-shadow: var(--ts);
 }
 
@@ -260,7 +259,7 @@ header {
     margin-left: 10%;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1100px) {
     .intro {
         display: grid;
         margin: 0 35px;
@@ -270,15 +269,15 @@ header {
             "img subtitle";
         grid-template-columns: min-content max-content;
         justify-content: center;
+        height: 38rem;
+        grid-gap: 4em;
     }
 
     .intro__img {
         grid-area: img;
-        max-width: 250px;
+        max-width: 300px;
         position: relative;
         z-index: 2;
-        margin-right: 100px;
-        margin-left: -100px;
     }
 
     .section__title .section__subtitle {
@@ -291,9 +290,10 @@ header {
         grid-row: 2;
         text-align: center;
         position: relative;
-        left: -10em;
-        width: calc(180% + 27em);
+        left: -17em;
+        width: calc(200% + 30em);
         margin-left: -10em;
+        margin-top: -5rem;
     }
 }
 
@@ -307,11 +307,11 @@ header {
     background-blend-mode: multiply;
     background-position: center;
     color: var(--clr-light);
-    margin: -3em 35px;
+    margin: -1em 35px;
     text-align: center;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
     .services {
         display: flex;
         margin-left: auto;
@@ -348,8 +348,8 @@ header {
 /* ---------------- ABOUT ME SECTION ---------------- */
 
 .about-me {
-    max-width: 1100px;
     background-color: #eee;
+    margin: 0 35px;
 }
 
 .about__img {
@@ -362,8 +362,6 @@ header {
 @media (min-width: 900px) {
     .about-me {
         display: grid;
-        margin: 0 35px;
-        max-width: 1830px;
         grid-template-columns: 1fr 200px;
         grid-template-areas:
             "title img"
@@ -413,6 +411,11 @@ header {
     background-repeat: no-repeat;
     background-position: top;
     text-align: center;
+}
+
+.plantel__logo {
+    width: 30%;
+    margin: -11em -50em;
 }
 
 .my-work .section__title {
