@@ -408,7 +408,7 @@ header {
 .my-work {
     position: relative;
     background-image: linear-gradient(to right top, rgba(48, 0, 0, 0.9), rgba(48, 0, 0, 0.3)),url(plantel-background.jpg);
-    background-size: cover;
+    /* background-size: cover; */
     background-repeat: no-repeat;
     background-position: top;
     text-align: center;
@@ -435,19 +435,32 @@ header {
 
     .plantel {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(4, 1fr); 
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr); 
         justify-items: center;
         align-items: center;
     }
 
-    .plantel__item {
-        position: relative;
-        transition: 0.5s
+    .my-work ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 29px;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
     }
 
-    .plantel__item:hover{
-        transform: scale(1.10, 1.10)
+    .my-work li {
+        transition: 0.3s;
+    }
+
+    
+    .my-work li:hover {
+        transform: scale(1.15, 1.15);
+    }
+
+    .plantel__item {
+        position: relative;
     }
     
     .plantel__item > .player__info {
@@ -456,7 +469,7 @@ header {
         text-shadow: var(--ts);
 
         position: absolute;
-        top: 60%;
+        top: -4rem;
         left: 50%;
         transform: translate(-50%, -50%);
 
