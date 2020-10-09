@@ -7,7 +7,7 @@
 :root{ 
     --clr-light: #eee;
     --clr-dark: #303030;
-    --clr-accent: #17bdd3af;
+    --clr-accent: #81818198;
 
     --ff-primary: 'Open Sans', sans-serif;
     --ff-secondary: 'Epilogue', sans-serif;
@@ -16,8 +16,19 @@
 body {
     background-color: var(--clr-accent);
     font-family: var(--ff-primary);
+    margin: 0 30px;
 }
 
-.container-fluid {
-    background-color: rgb(0, 139, 69);
+.btn-primary {
+    background-color: rgb(85, 26, 26);
 }
+
+.btn-primary:hover {
+    background-color: grey;
+}
+
+.col {
+    background-color: #eee;
+    border: 1px solid black;
+}
+

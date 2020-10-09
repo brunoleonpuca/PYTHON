@@ -1,7 +1,18 @@
-from  flask import Flask, render_template, url_for, redirect
+import os
+from flask import Flask
 
-app = Flask(__name__)
+def create_app():
+    app = Flask(__name__)
 
-@app.route("/")
-def index():
-    return render_template("index.html")
+    app.config.from_mapping(
+        SECRET_KEY = "mikey",
+        DATABASE_HOST = "localhost",#os.environ.get("FLASK_DATABASE_HOST"), #localhost
+        DATABASE_USER = "chanchito",#os.environ.get("FLASK_DATABASE_USER"), #chanchito
+        DATABASE_PASSWORD = "feliz",#os.environ.get("FLASK_DATABASE_PASSWORD"), #feliz
+        DATABASE = "leblog"#os.environ.get("FLASK_DATABASE") #leblog
+    )
+    
+    from db import init_app
+    db.init_app(app)
+
+    return app
