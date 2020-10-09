@@ -8,10 +8,10 @@ def create_app():
     
     app.config.from_mapping( # Nos permite definir variables de entorno para configurar la app 
         SECRET_KEY="mikey", # Para definir la llave de una sesion, crear la sesion, famosa "cookie"="identificador unico"
-        DATABASE_HOST=os.environ.get("FLASK_DATABASE_HOST"), # Definimos donde esta la bdd
-        DATABASE_PASSWORD=os.environ.get("FLASK_DATABASE_PASSWORD"), # La contraseña de la bdd
-        DATABASE_USER=os.environ.get("FLASK_DATABASE_USER"), # El usuario que va a acceder a la bdd
-        DATABASE=os.environ.get("FLASK_DATABASE"), # El nombre de la bdd
+        DATABASE_HOST="localhost", #os.environ.get("FLASK_DATABASE_HOST"), # Definimos donde esta la bdd
+        DATABASE_PASSWORD="1234", #os.environ.get("FLASK_DATABASE_PASSWORD"), # La contraseña de la bdd
+        DATABASE_USER="chanchitofeliz", #os.environ.get("FLASK_DATABASE_USER"), # El usuario que va a acceder a la bdd
+        DATABASE="prueba" #os.environ.get("FLASK_DATABASE"), # El nombre de la bdd
     )# Esto se utiliza para definir la base de los accesos de nuestra app
     
     from . import db # Traemos db.py

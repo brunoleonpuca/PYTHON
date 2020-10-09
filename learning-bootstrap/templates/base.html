@@ -3,7 +3,7 @@
 <html lang="en">
 
 <title>
-    {% block title %}{% endblock %}
+    LeBlog - {% block title %}{% endblock %}
 </title>
 
 <head>
@@ -15,11 +15,23 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     
     <link rel="stylesheet" href="{{ url_for("static", filename="index.css") }}">
+
     {% block head %}{% endblock %}
 </head>
 
 <body>
+    <div class="jumbotron">
+        <h1 class="display-4">Hello, world!</h1>
+        <p class="lead">Esta va a ser una pagina estilo blog, creado unicamente a partir de la herramienta llamada Boostrap (v4)</p>
+        <hr class="my-4">
+        <p>Boostrap utiliza clases y fuentes predeterminadas en cada uno de sus elementos, por lo que es recomendable irse aprendiendo cada una de estas clases</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="https://getbootstrap.com/docs/4.5/components/" role="button" target="_blank">A componentes de B4</a>
+        </p>
+    </div>
+    <br>
     {% block content %}{% endblock %} 
+
     <script src="{{ url_for("static", filename="js/index.js") }}"></script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
