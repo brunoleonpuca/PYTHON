@@ -17,3 +17,7 @@ body {
     background-color: var(--clr-accent);
     font-family: var(--ff-primary);
 }
+
+.container-fluid {
+    background-color: rgb(0, 139, 69);
+}
