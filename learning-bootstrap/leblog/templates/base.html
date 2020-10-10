@@ -2,11 +2,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<title>
-    LeBlog - {% block title %}{% endblock %}
-</title>
-
 <head>
+    <title>
+        {% block title %}{% endblock %} - LeBlog 
+    </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Epilogue&family=Open+Sans&display=swap" rel="stylesheet">
@@ -15,22 +14,37 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     
     <link rel="stylesheet" href="{{ url_for("static", filename="index.css") }}">
-
-    {% block head %}{% endblock %}
 </head>
 
 <body>
-    <div class="jumbotron">
-        <h1 class="display-4">Hello, world!</h1>
-        <p class="lead">Esta va a ser una pagina estilo blog, creado unicamente a partir de la herramienta llamada Boostrap (v4)</p>
-        <hr class="my-4">
-        <p>Boostrap utiliza clases y fuentes predeterminadas en cada uno de sus elementos, por lo que es recomendable irse aprendiendo cada una de estas clases</p>
-        <p class="lead">
-            <a class="btn btn-primary btn-lg" href="https://getbootstrap.com/docs/4.5/components/" role="button" target="_blank">A componentes de B4</a>
-        </p>
-    </div>
-    <br>
-    {% block content %}{% endblock %} 
+    <header>
+        <ul class="nav">
+            {% if g.user %}
+            <li class="nav-item">
+                <label>{{ g.user["username"] }}</label>
+                <span><a class="nav-link active" href='{{ url_for("auth.logout") }}'>Cerrar Sesion</a></span>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <span><a class="nav-link active" href='{{ url_for("auth.register") }}'>Registrarse</a></span>
+            </li>
+            <li class="nav-item">
+                <span><a class="nav-link active" href='{{ url_for("auth.login") }}'>Iniciar Sesion</a></span>
+            </li>
+            {% endif %}
+        </ul>
+
+        {% block header %}{% endblock %}
+        <br>
+    </header>
+
+    <section class="content">
+        {% for message in get_flashed_messages() %}
+            <div class="flash">{{ message }}</div>
+        {% endfor %}
+
+        {% block content %}{% endblock %}
+    </section>
 
     <script src="{{ url_for("static", filename="js/index.js") }}"></script>
 
