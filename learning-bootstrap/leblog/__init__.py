@@ -16,6 +16,10 @@ def create_app():
     db.init_app(app)
 
     from . import auth
+    from . import workspace
+    
     app.register_blueprint(auth.bp)
+    app.register_blueprint(workspace.bp)
+
 
     return app
