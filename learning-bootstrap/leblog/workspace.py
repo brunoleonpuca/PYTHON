@@ -15,3 +15,15 @@ def index():
     blogs = c.fetchall()
 
     return render_template("workspace/index.html", blogs=blogs)
+
+
+@bp.route("/create", methods=["POST", "GET"])
+@login_required
+def create():
+    return " "
+
+
+@bp.route("/<int:id>/update", methods=["POST", "GET"])
+@login_required
+def update(id):
+    return " " 

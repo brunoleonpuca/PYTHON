@@ -32,6 +32,16 @@ body {
     color: rgba(232, 230, 227, 0.7);
 }
 
+.nav-item__logout {
+    display: flex;
+    align-items: baseline;
+    margin: 0 30px;
+}
+
+.nav-item__logout label {
+    margin-right: 20px;
+}
+
 .nav a {
     background-color: transparent;
     color: white;
@@ -91,4 +101,14 @@ body {
 .btn__submit:active {
     background-color: orange;
     border: 1px solid orange;
+}
+
+.jumbotron {
+    margin: 0 30px;
+    padding: 2rem 2rem;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
 }
