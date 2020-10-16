@@ -20,7 +20,7 @@ def index():
 @bp.route("/create", methods=["POST", "GET"])
 @login_required
 def create():
-    return " "
+    return render_template("workspace/create.html")
 
 
 @bp.route("/<int:id>/update", methods=["POST", "GET"])

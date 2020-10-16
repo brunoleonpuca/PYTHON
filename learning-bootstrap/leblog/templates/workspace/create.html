@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %} Nuevo Blog{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+<div class="container-md">
+    <form class="was-validated" method="POST">
+        <div class="mb-3 col-12 blog__title">
+            <label>Titulo del blog:</label>
+            <input name="title" id="title" required />
+        </div>
+        <div class="col-12">
+            <textarea class="textarea__form" id="validationTextarea" placeholder="Escribe lo que quieras..." rows="16" cols="100" required></textarea>
+        </div>
+        <div class="col-12 blog__buttons">
+            <button type="submit" class="btn btn-success">Guardar</button>
+            <button type="submit" class="btn btn-danger">Cancelar</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

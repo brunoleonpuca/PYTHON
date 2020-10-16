@@ -9,11 +9,24 @@
     --clr-dark: #303030;
     --cld-grey: #202020;
     --clr-accent: #81818198;
-    --clr-body: linear-gradient(0deg, rgba(255,121,25,1) 6%, rgb(40, 44, 48,1) 28%);
+    --clr-body: rgb(209, 209, 209);
+    
+    --clr-theme: rgba(255,119,0,1);
+
+    --bs-header: -2px 9px 4px #81818198;
+    --bs-footer: -2px -9px 4px #81818198;
 
     --ff-primary: 'Open Sans', sans-serif;
     --ff-secondary: 'Epilogue', sans-serif;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 2rem;
+    --fs-h4: 1.25rem;
+    --fs-body: 1rem;
 }
+
+
 
 html {
     height: 100%;
@@ -24,12 +37,27 @@ body {
     font-family: var(--ff-primary);
     overflow-y: hidden;
 }
+
+header {
+    background-color: var(--clr-dark);
+    color: white;
+    border-bottom: 2px solid var(--clr-theme);
+    box-shadow: var(--bs-header);
+}
+
+footer {
+    background-color: var(--clr-dark);
+    color: white;
+    border-top: 2px solid var(--cld-theme);
+    box-shadow: var(--bs-footer);
+}
+
 .nav {
     justify-content: flex-end;
-    font-size: 1.5em;
+    /* font-size: 1.5em;
     border-bottom: 2px solid darkorange;
     background-color: rgb(40, 44, 48, 90%);
-    color: rgba(232, 230, 227, 0.7);
+    color: rgba(232, 230, 227, 0.7); */
 }
 
 .nav-item__logout {
@@ -110,5 +138,47 @@ body {
 
 .content {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+
+.blog__title {
+    width: 100%;
+    text-align: center;
+}
+
+.container-md {
+    width: 100%;
+    text-align: center;
+}
+
+.textarea__form {
+    resize: none;
+    width: 100%;
+    max-height: 300px;
+    font-size: 1.5em;
+    padding: 5px 15px;
+    border: 2px solid orangered;
+}
+
+#title {
+    width: 100%;
+    font-size: 2em;
+    padding: 0 10px;
+    border: 2px solid orangered;
+}
+
+.blog__title label {
+    font-size: 2em;
+    margin-right: 10px;
+}
+
+.blog__buttons {
+    margin-top: 10px;
+    text-align-last: justify;
+}
+
+.blog__buttons button{
+    width: 130px;
+    text-align-last: center;
 }
