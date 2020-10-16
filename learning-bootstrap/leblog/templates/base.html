@@ -21,17 +21,17 @@
         <ul class="nav">
             <img class="mb-4" src="/static/img/blog-logo.png" alt="" width="72" height="72">
             {% if g.user %}
-            <li class="nav-item__logout">
-                <label>Hola, {{ g.user["username"] }}</label>
-                <span><a class="nav-link active" href='{{ url_for("auth.logout") }}'>Cerrar Sesion</a></span>
-            </li>
-            {% else %}
-            <li class="nav-item">
-                <span><a class="nav-link active" href='{{ url_for("auth.register") }}'>Registrarse</a></span>
-            </li>
-            <li class="nav-item">
-                <span><a class="nav-link active" href='{{ url_for("auth.login") }}'>Iniciar Sesion</a></span>
-            </li>
+                <li class="nav-item__logout">
+                    <label>Hola, {{ g.user["username"] }}</label>
+                    <span><a class="nav-link active" href='{{ url_for("auth.logout") }}'>Cerrar Sesion</a></span>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <span><a class="nav-link active" href='{{ url_for("auth.register") }}'>Registrarse</a></span>
+                </li>
+                <li class="nav-item">
+                    <span><a class="nav-link active" href='{{ url_for("auth.login") }}'>Iniciar Sesion</a></span>
+                </li>
             {% endif %}
         </ul>
 
@@ -46,6 +46,16 @@
 
         {% block content %}{% endblock %}
     </section>
+
+    <footer class="page-footer font-small pt-4 fixed-bottom">
+        <div class="container-fluid text-center text-md-left">
+
+        </div>
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="#"> Tuhermana.com</a>
+        </div>
+        {% block footer %}{% endblock %}
+    </footer>
 
     <script src="{{ url_for("static", filename="js/index.js") }}"></script>
 
