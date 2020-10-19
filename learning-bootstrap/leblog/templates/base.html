@@ -22,7 +22,7 @@
             <img class="mb-4" src="/static/img/blog-logo.png" alt="" width="72" height="72">
             {% if g.user %}
                 <li class="nav-item__logout">
-                    <label>Hola, {{ g.user["username"] }}</label>
+                    <label>Sesion de: {{ g.user["username"] }}</label>
                     <span><a class="nav-link active" href='{{ url_for("auth.logout") }}'>Cerrar Sesion</a></span>
                 </li>
                 {% else %}

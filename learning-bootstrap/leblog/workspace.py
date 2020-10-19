@@ -1,4 +1,4 @@
-from flask import Blueprint, flash, g, render_template, request, url_for, redirect, session
+from flask import Blueprint, flash, g, render_template, request, url_for, redirect, session, jsonify
 from werkzeug.exceptions import abort
 from leblog.auth import login_required
 from leblog.db import get_db
@@ -15,7 +15,6 @@ def index():
     blogs = c.fetchall()
 
     return render_template("workspace/index.html", blogs=blogs)
-
 
 @bp.route("/create", methods=["POST", "GET"])
 @login_required
