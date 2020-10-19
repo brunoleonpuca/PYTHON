@@ -34,25 +34,26 @@
                 </li>
             {% endif %}
         </ul>
-
-        {% block header %}{% endblock %}
-        <br>
     </header>
 
     <section class="content">
-        {% for message in get_flashed_messages() %}
-            <div class="flash">{{ message }}</div>
-        {% endfor %}
-
-        {% block content %}{% endblock %}
+        <div class="container">
+            <div class="row" id="row-header">
+                {% block header %}{% endblock %}
+            </div>
+            {% for message in get_flashed_messages() %}
+                <div class="flash">{{ message }}</div>
+            {% endfor %}
+            <div class="row" id="row-content">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
     </section>
 
     <footer class="page-footer font-small pt-4 fixed-bottom">
         <div class="container-fluid text-center text-md-left">
-
         </div>
-        <div class="footer-copyright text-center py-3">© 2020 Copyright:
-            <a href="#"> Tuhermana.com</a>
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:<a href="#"> Tuhermana.com</a>
         </div>
         {% block footer %}{% endblock %}
     </footer>

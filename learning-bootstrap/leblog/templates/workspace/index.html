@@ -4,37 +4,42 @@
 {% block title %}Workspace{% endblock %}
 
 {% block header %}
-<div class="jumbotron">
-    <h1 class="display-4">LeBlog</h1>
-    <p class="lead">Esta va a ser una pagina estilo blog, creado unicamente a partir de la herramienta llamada Boostrap (v4)</p>
-    <hr class="my-4">
-    <p>Boostrap utiliza clases y fuentes predeterminadas en cada uno de sus elementos, por lo que es recomendable irse aprendiendo cada una de estas clases</p>
-    <p class="lead">
-        <a class="btn btn-primary btn-lg" href="https://getbootstrap.com/docs/4.5/components/" role="button" target="_blank">A componentes de B4</a>
-    </p>
+<div class="col-12">
+    <div class="jumbotron">
+        <h1 class="display-4">LeBlog</h1>
+        <p class="lead">Esta va a ser una pagina estilo blog, creado unicamente a partir de la herramienta llamada Boostrap (v4)</p>
+        <hr class="my-4">
+        <p>Boostrap utiliza clases y fuentes predeterminadas en cada uno de sus elementos, por lo que es recomendable irse aprendiendo cada una de estas clases</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="https://getbootstrap.com/docs/4.5/components/" role="button" target="_blank">A componentes de B4</a>
+        </p>
+    </div>
 </div>
 {% endblock %}
 
 {% block content %}
-{% if g.user %}
+<div class="col-12">
+    {% if g.user %}
     <a class="action" href="{{ url_for('workspace.create') }}">Nuevo blog</a>
-{% endif %}
-<div>
-    <ul>
-        {% for blog in blogs %}
-            <li class="listed__blog">
-                <div>
-                    <h1>{{ blog['title'] }}</h1>
-                    <div class="about">{{ todo["created_at"].strftime("%d/%m/%Y, %H:%M:%S") }}</div>
-                    <a class="action" href="{{ url_for('workspace.update', id=blog['id']) }}">Editar blog</a>
-                </div>
-            </li>
-            {% if not loop.last %}
-                <hr>
-            {% endif %}
-        {% endfor %}
-    </ul>
-    <div class="text__blog"></div>
+    {% endif %}
+    <div class="container">
+        <div class="col-4">
+            <ul>
+                {% for blog in blogs %}
+                    <li class="listed__blog">
+                        <h1>{{ blog['title'] }}</h1>
+                        <div class="about">{{ todo["created_at"].strftime("%d/%m/%Y, %H:%M:%S") }}</div>
+                        <a class="action" href="{{ url_for('workspace.update', id=blog['id']) }}">Editar blog</a>
+                    </li>
+                    {% if not loop.last %}
+                        <hr>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col-8">
+            
+        </div>
+    </div>
 </div>
-
 {% endblock %}
