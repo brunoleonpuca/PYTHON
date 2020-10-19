@@ -22,13 +22,13 @@
     {% if g.user %}
     <a class="action" href="{{ url_for('workspace.create') }}">Nuevo blog</a>
     {% endif %}
-    <div class="container">
-        <div class="col-4">
+    <div class="container" id="container-index">
+        <div class="col-4" id="listed-blogs">
             <ul>
                 {% for blog in blogs %}
                     <li class="listed__blog">
                         <h1>{{ blog['title'] }}</h1>
-                        <div class="about">{{ todo["created_at"].strftime("%d/%m/%Y, %H:%M:%S") }}</div>
+                        <div class="about">{{ blog["created_at"].strftime("%d/%m/%Y, %H:%M:%S") }}</div>
                         <a class="action" href="{{ url_for('workspace.update', id=blog['id']) }}">Editar blog</a>
                     </li>
                     {% if not loop.last %}
@@ -37,8 +37,8 @@
                 {% endfor %}
             </ul>
         </div>
-        <div class="col-8">
-            
+        <div class="col-8" id="selected-blog">
+
         </div>
     </div>
 </div>
