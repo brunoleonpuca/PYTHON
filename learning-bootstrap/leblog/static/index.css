@@ -143,12 +143,12 @@ header {
     width: 100%;
     text-align: center;
 }
-
+/* 
 #listed-blogs {
     display: flex;
     flex-direction: column;
     margin: 0 -130px;
-}
+} */
 
 .textarea__form {
     resize: none;
