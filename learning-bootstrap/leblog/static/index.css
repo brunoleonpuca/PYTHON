@@ -26,6 +26,7 @@
     --fs-blog: 1rem;
 }
 
+/*--------------------------------------------------HEADER SECTION----------------------------------------------------------*/
 
 html {
     position: relative;
@@ -78,6 +79,14 @@ header {
     left: 0;
 }
 
+/*-----------------------------------------------------REGISTER/LOGIN SECTION---------------------------------------------------------*/
+
+.row {
+    vertical-align: middle;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
 .form-register-box {
     margin: 50px;
 }
@@ -122,16 +131,43 @@ header {
     border: 1px solid orange;
 }
 
+/*--------------------------------------------------INDEX SECTION-------------------------------------------------------*/
+
 .jumbotron {
     margin: 15px 30px;
     padding: 2rem 2rem;
     background-color: darkgrey;
 }
 
-.row {
-    vertical-align: middle;
-    justify-content: center;
-    margin: 50px;
+#container-index {
+    margin-top: 40px;
+}
+
+#new_blog {
+    color: #303030;
+    background-color: rgb(255, 241, 241);
+    font-size: 1.5rem;
+    padding: 10px;
+    margin: 30px;
+    border: 1px solid darkorange;
+    border-radius: 10px;
+    box-shadow: 2px 2px 7px 1px black;
+}
+
+#new_blog:hover {
+    color: var(--clr-theme);
+}
+
+#new_blog:active {
+    transform: scale(0.95, 0.95);
+}
+
+#carousel-row {
+    justify-content: unset;
+}
+
+#row-header {
+    background-color: rgb(153, 153, 153);
 }
 
 .blog__title {
@@ -139,16 +175,17 @@ header {
     text-align: center;
 }
 
-.container {
-    width: 100%;
-    text-align: center;
+.carousel-item h2 {
+    margin-bottom: 40px;
 }
-/* 
-#listed-blogs {
-    display: flex;
-    flex-direction: column;
-    margin: 0 -130px;
-} */
+
+.carousel-control-next,
+.carousel-control-prev {
+    filter: invert(100%);
+    margin: 115px -90px;
+}
+
+/*-------------------------------------------------CREATE/UPDATE BLOG SECTION----------------------------------------------------------------*/
 
 .textarea__form {
     resize: none;
@@ -180,6 +217,8 @@ header {
     width: 130px;
     text-align-last: center;
 }
+
+/*-------------------------------------------------FOOTER SECTION----------------------------------------------------------------*/
 
 footer {
     background-color: var(--clr-dark);

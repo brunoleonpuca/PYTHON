@@ -4,7 +4,7 @@
 {% block title %}Workspace{% endblock %}
 
 {% block header %}
-<div class="col-12">
+<div class="container-xl">
     <div class="jumbotron">
         <h1 class="display-4">LeBlog</h1>
         <p class="lead">Esta va a ser una pagina estilo blog, creado unicamente a partir de la herramienta llamada Boostrap (v4)</p>
@@ -18,42 +18,40 @@
 {% endblock %}
 
 {% block content %}
-<div class="col-12">
+<div class="container-md" id="carousel-row">
     {% if g.user %}
-    <a class="action" href="{{ url_for('workspace.create') }}">Nuevo blog</a>
+        <span><a class="action" id="new_blog" href="{{ url_for('workspace.create') }}">Nuevo blog</a></span>
     {% endif %}
-    <div class="row">
-        <div class="container" id="container-index">
-            <div class="col-12" id="listed-blogs">
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
-                    <div class="carousel-inner">
-                        {% if blogs|length > 0 %}
-                            {% for blog in blogs %}
-                                <div class="carousel-item {% if loop.first %}active{% endif %}">
-                                    <div class="blog-slide d-block w-100">
-                                        <h2>{{ blog['title'] }}</h2>
-                                        <p>{{ blog['blog'] }}</p>
-                                        <div class="about">{{ blog['created_at'].strftime("%d/%m/%Y, %H:%M:%S") }}</div>
-                                        <a class="action" href="{{ url_for('workspace.update', id=blog['id']) }}">Editar blog</a>
-                                    </div>
+    <div class="row" id="container-index">
+        <div class="container" id="listed-blogs">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
+                <div class="carousel-inner">
+                    {% if blogs|length > 0 %}
+                        {% for blog in blogs %}
+                            <div class="carousel-item {% if loop.first %}active{% endif %}">
+                                <div class="blog-slide d-block w-100">
+                                    <h2>{{ blog['title'] }}</h2>
+                                    <p>{{ blog['blog'] }}</p>
+                                    <div class="about">{{ blog['created_at'].strftime("%d/%m/%Y, %H:%M:%S") }}</div>
+                                    <a class="action" href="{{ url_for('workspace.update', id=blog['id']) }}">Editar blog</a>
                                 </div>
-                            {% endfor %}
-                        {% else %}
-                            <div class="carousel-item active">
-                                <h2>Titulo de tu primer blog!</h2>
-                                <p>Tu primer blog puede estar escrito aca, solo dale click a "Nuevo blog"!</p>
                             </div>
-                        {% endif %}
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+                        {% endfor %}
+                    {% else %}
+                        <div class="carousel-item active">
+                            <h2>Titulo de tu primer blog!</h2>
+                            <p>Tu primer blog puede estar escrito aca, solo dale click a "Nuevo blog"!</p>
+                        </div>
+                    {% endif %}
                 </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
         </div>
     </div>
