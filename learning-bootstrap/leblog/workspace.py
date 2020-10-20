@@ -1,4 +1,4 @@
-from flask import Blueprint, flash, g, render_template, request, url_for, redirect, session, jsonify
+from flask import Blueprint, flash, g, render_template, request, url_for, redirect, session
 from werkzeug.exceptions import abort
 from leblog.auth import login_required
 from leblog.db import get_db
@@ -10,7 +10,8 @@ bp = Blueprint("workspace", __name__)
 def index():
     db, c = get_db()
     c.execute(
-        "select u.id, b.title, b.blog, b.created_by, b.created_at, u.username from blog b JOIN user u on b.created_by = u.id order by created_at desc" 
+        "select b.id, b.title, u.username, b.created_at, b.blog from blog b JOIN user u "
+        "on b.created_by = u.id where b.created_by = %s order by b.created_at desc", (g.user["id"],) 
     )
     blogs = c.fetchall()
 
