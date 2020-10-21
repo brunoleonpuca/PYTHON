@@ -18,9 +18,9 @@
 {% endblock %}
 
 {% block content %}
-<div class="container-xl" id="carousel-row">
+<div class="container-fluid" id="carousel-row">
     {% if g.user %}
-        <span id="new_blog"><a class="action" href="{{ url_for('workspace.create') }}">Nuevo blog</a></span>
+        <span><a class="btn new_blog" href="{{ url_for('workspace.create') }}">Nuevo blog</a></span>
     {% endif %}
     <div class="row" id="container-index">
         <div class="container" id="listed-blogs">
@@ -32,6 +32,7 @@
                                 <div class="blog-slide d-block w-100">
                                     <h2>{{ blog['title'] }}</h2>
                                     <p>{{ blog['blog'] }}</p>
+                                    <br>
                                     <div class="about">{{ blog['created_at'].strftime("%d/%m/%Y, %H:%M:%S") }}</div>
                                     <a class="action" href="{{ url_for('workspace.update', id=blog['id']) }}">Editar blog</a>
                                 </div>
