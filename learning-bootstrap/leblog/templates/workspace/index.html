@@ -1,15 +1,15 @@
 <!--Setup HIJO HTML-->
 {% extends 'base.html' %}
 
-{% block title %}Workspace{% endblock %}
+{% block title %}Index{% endblock %}
 
 {% block header %}
-<div class="container-xl">
+<div class="container-fluid">
     <div class="jumbotron">
-        <h1 class="display-4">LeBlog</h1>
-        <p class="lead">Esta va a ser una pagina estilo blog, creado unicamente a partir de la herramienta llamada Boostrap (v4)</p>
+        <h1 class="display-4">Movieing</h1>
+        <p class="lead">"Movieing" will be a web application that contains a large movies/series database from which you can search analysis and ratings about the film you want to watch and discover if it's good, it's bad or even if it's worth your time.</p>
         <hr class="my-4">
-        <p>Boostrap utiliza clases y fuentes predeterminadas en cada uno de sus elementos, por lo que es recomendable irse aprendiendo cada una de estas clases</p>
+        <p>Esta va a ser una pagina creada a partir de la herramienta llamada Boostrap (v4)</p>
         <p class="lead">
             <a class="btn btn-primary btn-lg" href="https://getbootstrap.com/docs/4.5/components/" role="button" target="_blank">A componentes de B4</a>
         </p>
@@ -18,9 +18,9 @@
 {% endblock %}
 
 {% block content %}
-<div class="container-md" id="carousel-row">
+<div class="container-xl" id="carousel-row">
     {% if g.user %}
-        <span><a class="action" id="new_blog" href="{{ url_for('workspace.create') }}">Nuevo blog</a></span>
+        <span id="new_blog"><a class="action" href="{{ url_for('workspace.create') }}">Nuevo blog</a></span>
     {% endif %}
     <div class="row" id="container-index">
         <div class="container" id="listed-blogs">
