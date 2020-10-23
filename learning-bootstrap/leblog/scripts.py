@@ -16,7 +16,8 @@ instructions = [
             created_by INT NOT NULL,
             created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
             title TEXT NOT NULL,
-            blog TEXT NOT NULL,
+            analysis TEXT NOT NULL,
+            rating INT NOT NULL,
             FOREIGN KEY (created_by) REFERENCES user (id)
         );
     """
