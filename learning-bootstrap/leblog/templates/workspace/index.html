@@ -6,8 +6,8 @@
 {% block header %}
 <div class="container-fluid">
     <div class="jumbotron">
-        <h1 class="display-4">Movieing</h1>
-        <p class="lead">"Movieing" will be a web application that contains a large movies/series database from which you can search analysis and ratings about the film you want to watch and discover if it's good, it's bad or even if it's worth your time.</p>
+        <h1 class="display-4">Moviefy</h1>
+        <p class="lead">"Moviefy" will be a web application that contains a large movies/series database from which you can search analysis and ratings about the film you want to watch and discover if it's good, it's bad or even if it's worth your time.</p>
         <hr class="my-4">
         <p>Esta va a ser una pagina creada a partir de la herramienta llamada Boostrap (v4)</p>
         <p class="lead">
@@ -20,7 +20,7 @@
 {% block content %}
 <div class="container-fluid" id="carousel-row">
     {% if g.user %}
-        <span><a class="btn new_blog" href="{{ url_for('workspace.create') }}">Nuevo blog</a></span>
+        <span><a class="btn new_blog" href="{{ url_for('workspace.create') }}">New Movie Rating</a></span>
     {% endif %}
     <div class="row" id="container-index">
         <div class="container" id="listed-blogs">

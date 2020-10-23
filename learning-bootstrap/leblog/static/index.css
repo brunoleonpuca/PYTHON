@@ -6,6 +6,7 @@
 
 :root{ 
     --clr-light-font: #eee;
+    --clr-grey-background: rgb(192, 192, 192);
 
     --clr-body: #202020;
     --clr-header: rgb(14, 0, 58);
@@ -83,7 +84,7 @@ body {
     margin-right: 16px;
     background: var(--clr-theme-dark);
     font-size: 20px;
-    border: 2px solid var(--clr-theme-light);
+    /* border: 2px solid var(--clr-theme-light); */
 }
 
 .search-container button{
@@ -170,7 +171,7 @@ header {
     background-color: var(--clr-theme-dark);
     color: var(--clr-light-font);
     border: 3px solid var(--clr-theme-light);
-    box-shadow: 4px 6px 5px var(--clr-theme-dark);
+    box-shadow: 0px 9px 6px 3px var(--clr-theme-light);
     margin: 10px 10px;
     font-size: 2rem;
     padding: 10px;
@@ -178,11 +179,6 @@ header {
 
 #carousel-row .new_blog:active {
     transform: scale(0.9, 0.9);
-}
-
-.blog__title {
-    width: 100%;
-    text-align: center;
 }
 
 .carousel-item h2 {
@@ -205,37 +201,61 @@ header {
 
 /*-------------------------------------------------CREATE/UPDATE BLOG SECTION----------------------------------------------------------------*/
 
+#create_analysis {
+    color: var(--clr-light-font);
+    border: 3px double var(--clr-theme-light);
+    border-radius: 10px;
+    padding: 15px 30px;
+}
+
+#create_analysis h1 {
+    text-align: left;
+}
+
+#create_analysis .col-12 {
+    margin-top: 15px;
+}
+
 .textarea__form {
-    background-color: var(--clr-light-font);
+    background-color: var(--clr-grey-background);
     resize: none;
     width: 100%;
-    max-height: 300px;
-    font-size: 1.5em;
-    padding: 5px 15px;
-    border: 2px solid var(--clr-theme-light);
+    max-height: 250px;
+    font-size: 1.3em;
+    padding: 10px 15px;
+    border: 3px solid var(--clr-theme-light);
 }
 
 #title {
-    background-color: var(--clr-light-font);
+    background-color: var(--clr-grey-background);
     width: 100%;
-    font-size: 2em;
+    font-size: 1.5em;
     padding: 5px 10px;
-    border: 2px solid var(--clr-theme-light);
+    border: 3px solid var(--clr-theme-light);
 }
 
-.blog__title label {
-    font-size: 2em;
-    margin-right: 10px;
+.blog__title {
+    width: 100%;
+    text-align: center;
 }
 
 .blog__buttons {
     margin-top: 10px;
-    text-align-last: justify;
 }
 
 .blog__buttons button{
     width: 130px;
-    text-align-last: center;
+    margin-top: 20px;
+}
+
+#rating_buttons {
+    text-align: center;
+    font-size: 2rem;
+    margin: 5px;
+}
+
+#rating_buttons label {
+    color: var(--clr-theme-light)
 }
 
 /*-------------------------------------------------FOOTER SECTION----------------------------------------------------------------*/

@@ -1,23 +1,48 @@
 {% extends 'base.html' %}
-{% block title %} Nuevo Blog{% endblock %}
+{% block title %} Update movie analysis{% endblock %}
 
 {% block header %}
+<h1>Editing {{ blog["title"] }} Analysis</h1>
 {% endblock %}
 
 {% block content %}
-<div class="container-md">
+<div class="container-md" id="create_analysis">
     <form class="was-validated" method="POST">
-        <div class="mb-3 col-12 blog__title">
-            <label>Titulo del blog:</label>
-            <input name="title" id="title" required />
+        <div class="col-12 blog__title">
+            <h1>{{ blog["title"] }} Analysis</h1>
         </div>
-        <div class="col-12">
-            <textarea class="textarea__form" id="validationTextarea" placeholder="Escribe lo que quieras..." rows="16" cols="100" required></textarea>
+        <div class="col-12"><h1>Analysis</h1>
+            <textarea name="blog" class="textarea__form" id="validationTextarea" placeholder="Analysis..." value="{{ request.form['blog'] or blog['blog'] }}" rows="16" cols="100" required></textarea>
         </div>
-        <div class="col-12 blog__buttons">
-            <button type="submit" class="btn btn-success">Guardar</button>
-            <a href="/"><button type="button" class="btn btn-danger">Cancelar</button></a>
-            <button type="submit" class="btn btn-danger">Eliminar</button>
+
+        <div class="col-12" id="rating_buttons"><h2>Rating</h2>
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" id="materialInline1" name="inlineMaterialRadiosExample">
+                <label class="form-check-label" for="materialInline1">1</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" id="materialInline2" name="inlineMaterialRadiosExample">
+                <label class="form-check-label" for="materialInline2">2</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" id="materialInline3" name="inlineMaterialRadiosExample">
+                <label class="form-check-label" for="materialInline3">3</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" id="materialInline3" name="inlineMaterialRadiosExample">
+                <label class="form-check-label" for="materialInline3">4</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" id="materialInline3" name="inlineMaterialRadiosExample">
+                <label class="form-check-label" for="materialInline3">5</label>
+            </div>
+
+            <div class="col blog__buttons">
+                <button type="submit" class="btn btn-success">Save</button>
+                <a href="/"><button type="button" class="btn btn-danger">Cancel and go back</button></a>
+            </div>
         </div>
     </form>
 </div>
