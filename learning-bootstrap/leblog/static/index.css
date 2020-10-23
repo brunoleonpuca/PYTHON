@@ -41,6 +41,10 @@ body {
     margin-bottom: 100px;
 }
 
+.flash {
+    color: white;
+}
+
 .mb-4 {
     filter: invert(1);
 }
@@ -89,6 +93,10 @@ body {
 
 .search-container button{
     cursor: pointer;
+}
+
+.search-container input {
+    width: 350px;
 }
 
 /*--------------------------------------------------HEADER/JUMBO SECTION----------------------------------------------------------*/
@@ -197,6 +205,15 @@ header {
         filter: invert(100%);
         margin: 115px -85px;
     }
+}
+
+.index_rating {
+    color: var(--clr-light-font);
+    padding: 10px;
+    float: right;
+    border: 3px solid var(--clr-theme-light);
+    margin-right: 35px;
+    font-size: 1.5rem;
 }
 
 /*-------------------------------------------------CREATE/UPDATE BLOG SECTION----------------------------------------------------------------*/

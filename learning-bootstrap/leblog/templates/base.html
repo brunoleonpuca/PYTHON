@@ -4,7 +4,7 @@
 
 <head>
     <title>
-        {% block title %}{% endblock %} - LeBlog 
+        {% block title %}{% endblock %} - Moviefy 
     </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,20 +25,20 @@
             {% if g.user %}
                 <div class="search-container">
                     <form action="#">
-                        <input type="text" placeholder="Search a movie.." name="search">
+                        <input type="text" placeholder="Search the movie you wish to see..." name="search">
                         <button type="submit"><i class="fa fa-search"></i></button>
                     </form>
                 </div>
                 <li class="nav-item__logout">
-                    <label>Sesion de: {{ g.user["username"] }}</label>
-                    <span><a class="nav-link active" href='{{ url_for("auth.logout") }}'>Cerrar Sesion</a></span>
+                    <label>Session of: {{ g.user["username"] }}</label>
+                    <span><a class="nav-link active" href='{{ url_for("auth.logout") }}'>Log Out</a></span>
                 </li>
             {% else %}
                 <li class="nav-item">
-                    <span><a class="nav-link active" href='{{ url_for("auth.register") }}'>Registrarse</a></span>
+                    <span><a class="nav-link active" href='{{ url_for("auth.register") }}'>Register</a></span>
                 </li>
                 <li class="nav-item">
-                    <span><a class="nav-link active" href='{{ url_for("auth.login") }}'>Iniciar Sesion</a></span>
+                    <span><a class="nav-link active" href='{{ url_for("auth.login") }}'>Log In</a></span>
                 </li>
             {% endif %}
         </ul>
