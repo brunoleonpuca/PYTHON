@@ -50,4 +50,5 @@ def create():
 @bp.route("/<int:id>/update", methods=["POST", "GET"])
 @login_required
 def update(id):
-    return render_template("workspace/update.html")
+    
+    return render_template("workspace/update.html", blog=blog)
