@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" type="text/css"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}" type="text/css"/>
+
+    <title>Testing Boostrap 5</title>
+</head>
+<body>
+    <section class="tresCols">
+        <div class="container-md">
+            <div class="row">
+                <div class="col-sm" id="ej">1</div>
+                <div class="col-sm" id="ej">2</div>
+                <div class="col-sm" id="ej">3</div>
+            </div>
+            <div class="row">
+                <div class="col-sm" id="ej">4</div>
+                <div class="col-sm" id="ej">6</div>
+            </div>
+            <div class="row">
+                <div class="col-md-8" id="ej">Main Content</div>
+                <div class="col-md-4" id="ej">Sidebar</div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+</body>
+</html>
