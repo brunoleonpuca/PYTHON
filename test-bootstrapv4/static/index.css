@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eee;
+}
+
+header,
+footer {
+    height: 50px;
+    border: 1px solid black;
+}
+
+section {
+    margin: 20px;
+    height: 200px;
+    border: 3px solid black;
+}
+
+#header{
+    background-color: rgba(255, 0, 0, 0.434);
+}
+
+#nav{
+    background-color: rgba(255, 145, 0, 0.434);
+}
+
+#home{
+    background-color: rgba(229, 255, 0, 0.434);
+}
+
+#sidebars{
+    background-color: rgba(0, 255, 21, 0.434);
+}
+
+#sidebar {
+    text-align: center;
+    border: 1px solid black;
+    height: 200px;
+}
+
+#final{
+    background-color: rgba(0, 217, 255, 0.434);
+}
+
+#footer{
+    background-color: rgba(0, 60, 255, 0.434);
+}
