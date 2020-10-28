@@ -88,7 +88,7 @@ def load_logged_in_user(): # Funcion que carga el usuario a g (Variable global q
 def login_required(view): # View va a definir nuestros Endpoints
     @functools.wraps(view) # Envolvemos la funcion
     def wrapped_view(**kwargs):
-        if g.user is None: # Si el usuario esta logeado
+        if g.user is None: # Si el usuario NO esta logeado
             return redirect(url_for("auth.login"))
 
         return view(**kwargs) # Si se encuentra logeado, devolvemos el endpoint con sus argumentos

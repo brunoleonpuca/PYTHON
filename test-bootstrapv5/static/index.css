@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+#caja-campo {
+    position: relative;
+}
+
+.campo {
+    transform: rotate(90deg);
+    position: relative;
+    top: 60px;
+}
+
+#arq,
+#def,
+#med,
+#del {
+    position: absolute;
+}
+
+#pos {
+    position: absolute;
+}
+
+.col {
+    padding: 1rem;
+    background-color: rgb(95, 196, 255);
+    border: 2px solid #fff;
+    color: #fff;
+    text-align: center;
+    width: 100px;
+    height: 70px;
+    margin: 0 25px;
+}
+
+#arq {
+    top: 82px;
+    right: -336px;
+}
+
+#def {
+    display: flex;
+    bottom: 454px;
+    left: 132px;
+    width: 567px;
+}
+
+#med {
+    display: flex;
+    bottom: 260px;
+    left: 132px;
+    width: 567px; 
+}
+
+#del {
+    display: flex;
+    bottom: 75px;
+    left: 262px;
+    width: 567px; 
+}

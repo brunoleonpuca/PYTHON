@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" type="text/css"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}" type="text/css"/>
+
+    <title>Futbol 11</title>
+</head>
+<body>
+    <header>
+        <div class="container-fluid">
+            <input type="submit" value="4-4-2">
+            <input type="submit" value="4-3-3">
+        </div>
+    </header>
+    <section>
+        <div class="container" id="caja-campo">
+            <img class="campo" src="{{ url_for('static', filename='img/campo.jpg') }}" alt="campo de juego" width="800" height="700">
+            
+            <div class="container-fluid" id="arq">
+                <div class="row" id="pos">
+                    <div class="col">arq</div>
+                </div>
+            </div>
+
+            <div class="container-fluid" id="def">
+                <div class="row" id="pos">
+                    <div class="col">def</div>
+                    <div class="col">def</div>
+                    <div class="col">def</div>
+                    <div class="col">def</div>
+                </div>
+            </div>
+            <div class="container-fluid" id="med">
+                <div class="row" id="pos">
+                    <div class="col">med</div>
+                    <div class="col">med</div>
+                    <div class="col">med</div>
+                    <div class="col">med</div>
+                </div>
+            </div>
+            <div class="container-fluid" id="del">
+                <div class="row" id="pos">
+                    <div class="col">del</div>
+                    <div class="col">del</div>
+                </div>
+            </div>
+        </div>
+                
+    </section>
+
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+</body>
+</html>

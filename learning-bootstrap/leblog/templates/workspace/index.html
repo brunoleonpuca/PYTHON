@@ -1,0 +1,63 @@
+<!--Setup HIJO HTML-->
+{% extends 'base.html' %}
+
+{% block title %}Index{% endblock %}
+
+{% block header %}
+<div class="container-fluid">
+    <div class="jumbotron">
+        <h1 class="display-4">Moviefy</h1>
+        <p class="lead">"Moviefy" will be a web application that contains a large movies/series database from which you can search analysis and ratings about the film you want to watch and discover if it's good, it's bad or even if it's worth your time.</p>
+        <hr class="my-4">
+        <p>Esta va a ser una pagina creada a partir de la herramienta llamada Boostrap (v4)</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="https://getbootstrap.com/docs/4.5/components/" role="button" target="_blank">A componentes de B4</a>
+        </p>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid" id="carousel-row">
+    {% if g.user %}
+        <span><a class="btn new_blog" href="{{ url_for('workspace.create') }}">New Movie Rating</a></span>
+    {% endif %}
+    <div class="row" id="container-index">
+        <div class="container" id="listed-blogs">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
+                <div class="carousel-inner">
+                    {% if blogs|length > 0 %}
+                        {% for blog in blogs %}
+                            <div class="carousel-item {% if loop.first %}active{% endif %}">
+                                <div class="blog-slide d-block w-100">
+                                    <h2><u>{{ blog['title'] }}</u></h2>
+                                    <p>{{ blog['analysis'] }}</p>
+                                    <br>
+                                    <div class="index_rating">{{ blog['rating'] }}/5</div>
+                                    <div class="about">{{ blog['created_at'].strftime("%d/%m/%Y, %H:%M:%S") }}</div>
+                                    <a class="action" href="{{ url_for('workspace.update', id=blog['id']) }}">Edit analysis</a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <div class="carousel-item active">
+                            <h2>Title of your first movie rating!</h2>
+                            <p>This is going to be your first movie rating. Start by clicking the "New Movie Rating" button</p>
+                        </div>
+                    {% endif %}
+                </div>
+                {% if blogs|length > 0 %}
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

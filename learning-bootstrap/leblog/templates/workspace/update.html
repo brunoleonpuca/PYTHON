@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block title %} Update movie analysis{% endblock %}
+
+{% block header %}
+<h2>Editing {{ blog["title"] }} Analysis</h2>
+{% endblock %}
+
+{% block content %}
+<div class="container-md" id="create_analysis">
+    <form class="was-validated" method="POST">
+        <div class="col-12 blog__title">
+            <h2>{{ blog["title"] }} Analysis</h2>
+        </div>
+        <div class="col-12"><h1>Analysis</h1>
+            <textarea name="analysis" class="textarea__form" id="validationTextarea" placeholder="Analysis..." rows="16" cols="100" required>{{ request.form['blog'] or blog['blog'] }}</textarea>
+        </div>
+
+        <div class="col-12" id="rating_buttons"><h2>Rating</h2>
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" id="materialInline1" name="ratingRadioButton" value="1">
+                <label class="form-check-label" for="materialInline1">1</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" id="materialInline2" name="ratingRadioButton" value="2">
+                <label class="form-check-label" for="materialInline2">2</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" id="materialInline3" name="ratingRadioButton" value="3">
+                <label class="form-check-label" for="materialInline3">3</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" id="materialInline4" name="ratingRadioButton" value="4">
+                <label class="form-check-label" for="materialInline4">4</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" id="materialInline5" name="ratingRadioButton" value="5">
+                <label class="form-check-label" for="materialInline5">5</label>
+            </div>
+
+            <div class="col blog__buttons">
+                <button type="submit" class="btn btn-success">Save changes</button>
+                <a href="/"><button type="button" class="btn btn-danger">Cancel and go back</button></a>
+            </div>
+        </div>
+    </form>
+    <form class="was-validated" action="{{ url_for('workspace.delete', id=blog['id'] ) }}" method="POST">
+        <input class="danger" type="submit" value="Delete" onclick="return confirm('Do you wish to eliminate this analysis?')" />
+    </form>
+</div>
+{% endblock %}
