@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    HTML - Template, {{ titulo }}
+{% endblock %}
+
+{% block header %} 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <p>Header</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block nav %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <p>nav</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block home %}
+    <div class="container-xl">
+        <div class="row">
+            <div class="col">
+                <p>Hola Mundo</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block sidebars %}
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-4" id="sidebar">
+                <p>section1</p>
+            </div>
+            <div class="col-4" id="sidebar">
+                <p>section2</p>
+            </div>
+            <div class="col-4" id="sidebar">
+                <p>section3</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block final %}
+    <div class="container-xl">
+        <div class="row">
+            <div class="col">
+                <p>final</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <p>footer</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
