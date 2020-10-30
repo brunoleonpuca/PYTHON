@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="styles.css" type="text/css">
+
+        <title>Testing JS interactions with HTML and CSS</title>
+    </head>
+    <body>
+        <h1>Test</h1>
+
+        <form method="POST">
+            <table>
+                <tr>
+                    <td>Sumar</td>
+                    <td><input type="text" name="num1"></td>
+                    <td>+</td>
+                    <td><input type="text" name="num2"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="Calcular" onclick="sumar(this.form)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Resultado</td>
+                    <td><input type="text" name="resultado"></td>
+                </tr>
+            </table>
+        </form>
+
+        <button class="change-body">Cambiar color fondo</button>
+
+
+        <script type="text/javascript" src="interactions.js"></script>
+    </body>
+</html>
