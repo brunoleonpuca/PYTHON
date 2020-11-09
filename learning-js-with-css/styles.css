@@ -1,7 +1,221 @@
-body {
-    background-color: #eee;
+:root {
+    /* Pallete: https://coolors.co/2d3142-bfc0c0-ffffff-ef8354-4f5d75 */
+
+    --font-family: 'Josefin Sans', sans-serif;
+    --font-family-logo: 'Molle', cursive;
+
+    --font-clr-light: #FFFFFF;
+    --font-clr-dark: #4F5D75;
+    --font-clr-theme: #14213d;
+
+    --font-shadow: black 7px 7px 7px;
+
+    --clr-light-background: #BFC0C0;
+    --clr-dark-background: #2D3142;
 }
 
-.changecolor {
-    background-color: grey;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: 1rem;
+    margin: 0;
+    text-align: left;
+    background-color: var(--clr-dark-background);
+    color: var(--font-clr-dark);
+    position: relative;
+}
+
+/***************************** 
+    NAV SETTINGS  
+******************************/
+
+#main-nav {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: var(--clr-light-background);
+}
+
+#main-nav a {
+    color: var(--clr-dark-background);
+}
+
+#main-nav .navbar-toggler {
+    padding: 0.75rem;
+    font-size: 1rem;
+    background-color: var(--font-clr-dark);
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 10px;
+}
+
+#main-nav .navbar-brand {
+    color: var(--font-clr-dark);
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    word-break: keep-all;
+    white-space: normal;
+}
+
+#main-nav .navbar-nav .nav-item .nav-link {
+    font-size: 0.95rem;
+    color: var(--font-clr-dark);
+    letter-spacing: 0.07em;
+}
+
+#main-nav .navbar-nav .nav-item .nav-link.active, 
+#main-nav .navbar-nav .nav-item .nav-link:hover {
+    color: var(--font-clr-theme);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+@media (min-width: 992px) {
+    #main-nav {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        border: none;
+        background-color: var(--clr-dark-background);
+        transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+    }
+
+    #main-nav .navbar-nav .nav-item .nav-link {
+        color: var(--font-clr-light);
+    }
+
+    #main-nav .navbar-brand {
+        font-size: 1.5em;
+        transition: font-size 0.3s ease-in-out;
+        color: var(--font-clr-light);
+    }
+
+    #main-nav.navbar-shrink {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        background-color: var(--clr-dark-background);
+    }
+
+    #main-nav.navbar-shrink .navbar-brand {
+        font-size: 1.25em;
+    }
+
+    #main-nav .navbar-brand .nav-item {
+        margin-right: 1rem;
+    }
+
+    #main-nav .navbar-nav .nav-item:last-child {
+        margin-right: 0;
+    }
+}
+
+/***************************** 
+    HEADER SETTINGS  
+******************************/
+
+header.masthead {
+    padding-top: 10.5rem;
+    padding-bottom: 6rem;
+    text-align: center;
+    color: var(--font-clr-light);
+    background-image: url("assets/img/background1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    margin: 0 -15px;
+}
+
+header.masthead .masthead-subheading {
+    font-size: 5rem;
+    font-style: italic;
+    line-height: 3.5rem;
+    margin-bottom: 25px;
+    margin-top: 0.5em;
+    font-family: var( --font-family-logo);
+    text-shadow: var(--font-shadow);
+}
+
+header.masthead .masthead-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 3.25rem;
+    margin-bottom: 2rem;
+    text-shadow: var(--font-shadow);
+}
+
+header.masthead #masthead-btn {
+    margin-top: 50px;
+    font-size: 1em;
+    white-space: normal;
+    word-break: keep-all;
+    padding: 10px;
+    box-shadow: 4px 6px 8px 2px black;
+}
+
+header.masthead #masthead-btn:hover {
+    background-color: rgb(80, 80, 80);
+}
+
+@media (min-width: 768px) {
+    header.masthead {
+        padding-top: 17rem;
+        padding-bottom: 8.5rem;
+    }
+
+    header.masthead .masthead-subheading {
+        font-size: 5rem;
+        font-style: italic;
+        line-height: 2.25rem;
+        margin-bottom: 2rem;
+        margin-top: -1em;
+    }
+
+    header.masthead .masthead-heading {
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 4.5rem;
+        margin: 2rem;
+    }
+
+    header.masthead #masthead-btn {
+        font-size: 1.3rem;
+        padding: 10px;
+        width: 300px;
+    }
+}
+
+/***************************** 
+    SKILLS SETTINGS  
+******************************/
+
+#skills {
+    margin-top: 30px;
+    font-size: 1rem;
+    color: var(--font-clr-light);
+}
+
+#skills .subheading {
+    margin-bottom: 30px;
+}
+
+#skills .fa-stack {
+    width: 3em;
+    margin-bottom: -25px;
+    margin-top: 45px;
+}
+
+#skills .skill-text {
+    margin-bottom: 60px;
+}
+
+
+@media (min-width: 1100px){
+    #skills .fa-stack {
+        width: 6em;
+    }
 }
