@@ -1,12 +1,29 @@
-// Creamos funcion para interactuar desde el formulario con los elementos del HTML
-function sumar (form) {
-    form.resultado.value = Number(form.num1.value) + Number(form.num2.value)
-}
+(function ($) {
+    "use strict"; //Start use of strict
 
-// Creamos variable y funcion para interactuar con las acciones de los elementos del HTML y selectores del CSS
-const btn = document.querySelector('.change-body');
+    // Closes responsive menu when a scroll trigger link is clicked
+    $(".js-scroll-trigger").click(function () {
+        $(".navbar-collapse").collapse("hide");
+    });
 
-btn.addEventListener('click', () => {
-    document.body.classList.toggle('changecolor');
-});
+    // Activate scrollspy to add active class to navbar items on scroll
+    $("body").scrollspy({
+        target: "#main-nav",
+        offset: 74
+    });
 
+    // Collapse Navbar
+    var navbarCollapse = function () {
+        if ($("#main-nav").offset().top > 100) {
+            $("#main-nav").addClass("navbar-shrink");
+        } else {
+            $("#main-nav").removeClass("navbar-shrink");
+        }
+    };
+    // Collapse now if page is not at top
+    navbarCollapse();
+    // Collapse the navbar when page is scrolled
+    $(window).scroll(navbarCollapse);
+
+
+})(jQuery); //End use of strict
