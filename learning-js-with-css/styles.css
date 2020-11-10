@@ -6,9 +6,10 @@
 
     --font-clr-light: #FFFFFF;
     --font-clr-dark: #4F5D75;
-    --font-clr-theme: #14213d;
+    --font-clr-theme: #3a404e;
 
-    --font-shadow: black 7px 7px 7px;
+    --font-shadow-dark: black 7px 7px 7px;
+    --font-shadow-light: #505050 2px 2px 1px;
 
     --clr-light-background: #BFC0C0;
     --clr-dark-background: #2D3142;
@@ -35,8 +36,7 @@ body {
 ******************************/
 
 #main-nav {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem 1.8rem;
     background-color: var(--clr-light-background);
 }
 
@@ -58,40 +58,59 @@ body {
     font-weight: 700;
     letter-spacing: 0.07em;
     text-transform: uppercase;
-    word-break: keep-all;
+    /* word-break: keep-all; */
     white-space: normal;
+    position: relative;
+    left: -20px;
 }
 
 #main-nav .navbar-nav .nav-item .nav-link {
-    font-size: 0.95rem;
+    font-size: 1.3rem;
     color: var(--font-clr-dark);
     letter-spacing: 0.07em;
+    position: relative;
+    left: 50px;
+    margin: 0 15px;
 }
 
 #main-nav .navbar-nav .nav-item .nav-link.active, 
 #main-nav .navbar-nav .nav-item .nav-link:hover {
-    color: var(--font-clr-theme);
     cursor: pointer;
     text-decoration: underline;
+    text-shadow: var(--font-shadow-light);
+}
+
+#main-nav #navbarResponsive {
+    margin-left: -85px;
 }
 
 @media (min-width: 992px) {
     #main-nav {
+        font-size: 1.3rem;
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
         border: none;
-        background-color: var(--clr-dark-background);
+        background-color: transparent;
+        text-shadow: var(--font-shadow-dark);
         transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+    }
+    
+    #main-nav .nav-item {
+        font-size: 1.3rem;
     }
 
     #main-nav .navbar-nav .nav-item .nav-link {
         color: var(--font-clr-light);
+        left: 60px;
+        margin: 0 15px;
+        width: max-content;
     }
 
     #main-nav .navbar-brand {
         font-size: 1.5em;
         transition: font-size 0.3s ease-in-out;
         color: var(--font-clr-light);
+        right: 310px;
     }
 
     #main-nav.navbar-shrink {
@@ -118,7 +137,7 @@ body {
 ******************************/
 
 header.masthead {
-    padding-top: 10.5rem;
+    padding-top: 14.5rem;
     padding-bottom: 6rem;
     text-align: center;
     color: var(--font-clr-light);
@@ -137,7 +156,7 @@ header.masthead .masthead-subheading {
     margin-bottom: 25px;
     margin-top: 0.5em;
     font-family: var( --font-family-logo);
-    text-shadow: var(--font-shadow);
+    text-shadow: var(--font-shadow-dark);
 }
 
 header.masthead .masthead-heading {
@@ -145,16 +164,16 @@ header.masthead .masthead-heading {
     font-weight: 700;
     line-height: 3.25rem;
     margin-bottom: 2rem;
-    text-shadow: var(--font-shadow);
+    text-shadow: var(--font-shadow-dark);
 }
 
 header.masthead #masthead-btn {
-    margin-top: 50px;
     font-size: 1em;
     white-space: normal;
     word-break: keep-all;
     padding: 10px;
     box-shadow: 4px 6px 8px 2px black;
+    margin: 10px 25px 10px 45px;
 }
 
 header.masthead #masthead-btn:hover {
@@ -163,7 +182,7 @@ header.masthead #masthead-btn:hover {
 
 @media (min-width: 768px) {
     header.masthead {
-        padding-top: 17rem;
+        padding-top: 23rem;
         padding-bottom: 8.5rem;
     }
 
@@ -199,7 +218,7 @@ header.masthead #masthead-btn:hover {
     color: var(--font-clr-light);
 }
 
-#skills .subheading {
+#skills .section-subheading {
     margin-bottom: 30px;
 }
 
@@ -215,7 +234,29 @@ header.masthead #masthead-btn:hover {
 
 
 @media (min-width: 1100px){
+    #skills .section-heading {
+        margin-top: 60px;
+        font-size: 4rem;
+        font-weight: 700;
+    }
+
+    #skills .section-subheading {
+        font-size: 3rem;
+    }
+
     #skills .fa-stack {
         width: 6em;
     }
+
+    #skills .skill-header {
+        font-size: 2rem;
+    }
+
+    #skills .skill-text {
+        font-size: 2rem;
+    }
 }
+
+/***************************** 
+    PORTFOLIO SETTINGS  
+******************************/
