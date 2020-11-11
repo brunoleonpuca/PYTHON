@@ -12,7 +12,9 @@
     --font-shadow-light: #505050 2px 2px 1px;
 
     --clr-light-background: #BFC0C0;
-    --clr-dark-background: #2D3142;
+    --clr-dark-1-background: #2D3142;
+    --clr-dark-2-background: #262933;
+    --clr-dark-3-background: #3a3f4e;
 }
 
 *,
@@ -26,9 +28,10 @@ body {
     font-size: 1rem;
     margin: 0;
     text-align: left;
-    background-color: var(--clr-dark-background);
+    background-color: var(--clr-dark-1-background);
     color: var(--font-clr-dark);
     position: relative;
+    overflow-x: hidden;
 }
 
 /***************************** 
@@ -36,12 +39,13 @@ body {
 ******************************/
 
 #main-nav {
-    padding: 1rem 1.8rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     background-color: var(--clr-light-background);
 }
 
 #main-nav a {
-    color: var(--clr-dark-background);
+    color: var(--clr-dark-1-background);
 }
 
 #main-nav .navbar-toggler {
@@ -61,7 +65,7 @@ body {
     /* word-break: keep-all; */
     white-space: normal;
     position: relative;
-    left: -20px;
+    left: -40px;
 }
 
 #main-nav .navbar-nav .nav-item .nav-link {
@@ -86,7 +90,7 @@ body {
 
 @media (min-width: 992px) {
     #main-nav {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
         border: none;
@@ -107,7 +111,7 @@ body {
     }
 
     #main-nav .navbar-brand {
-        font-size: 1.5em;
+        font-size: 1.3em;
         transition: font-size 0.3s ease-in-out;
         color: var(--font-clr-light);
         right: 310px;
@@ -116,7 +120,9 @@ body {
     #main-nav.navbar-shrink {
         padding-top: 1rem;
         padding-bottom: 1rem;
-        background-color: var(--clr-dark-background);
+        border-bottom: solid;
+        border-color: var(--font-clr-light);
+        background-color: var(--clr-dark-1-background);
     }
 
     #main-nav.navbar-shrink .navbar-brand {
@@ -187,7 +193,7 @@ header.masthead #masthead-btn:hover {
     }
 
     header.masthead .masthead-subheading {
-        font-size: 5rem;
+        font-size: 6.5rem;
         font-style: italic;
         line-height: 2.25rem;
         margin-bottom: 2rem;
@@ -213,9 +219,14 @@ header.masthead #masthead-btn:hover {
 ******************************/
 
 #skills {
-    margin-top: 30px;
+    background-color: var(--clr-dark-3-background);
+    padding: 30px 60px 15px 60px;
     font-size: 1rem;
     color: var(--font-clr-light);
+}
+
+#skills .section-heading {
+    margin-top: 80px;
 }
 
 #skills .section-subheading {
@@ -235,13 +246,12 @@ header.masthead #masthead-btn:hover {
 
 @media (min-width: 1100px){
     #skills .section-heading {
-        margin-top: 60px;
-        font-size: 4rem;
+        font-size: 3rem;
         font-weight: 700;
     }
 
     #skills .section-subheading {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     #skills .fa-stack {
@@ -259,4 +269,373 @@ header.masthead #masthead-btn:hover {
 
 /***************************** 
     PORTFOLIO SETTINGS  
+******************************/
+#portfolio {
+    background-color: var(--clr-dark-2-background);
+    padding: 30px 60px 40px 60px;
+    font-size: 1rem;
+}
+
+#portfolio .section-heading {
+    color: var(--font-clr-light);
+    padding-top: 80px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#portfolio .section-subheading {
+    font-size: 2rem;
+    margin: 0 30px 60px 30px;
+}
+
+#portfolio .portfolio-item {
+    max-width: 30rem;
+    margin: 0 auto 30px auto;
+    text-align: center;
+    background-color: #fff;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+
+#portfolio .portfolio-item .portfolio-link {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(80, 80, 80, 0.6);
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity ease-in-out 0.25s;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+    font-size: 1.25rem;
+    color: white;
+}
+
+#portfolio .portfolio-item .portfolio-link:hover .portfolio-hover {
+    opacity: 1;
+}
+
+#portfolio .portfolio-item .img-fluid {
+    width: 100%;
+    min-height: 250px;
+    max-height: 250px;
+    object-fit: cover;
+}
+
+#portfolio .portfolio-item .portfolio-caption {
+    padding: 1.5rem;
+    text-align: center;
+    background-color: var(--clr-dark-1-background);
+    color: var(--font-clr-light);
+}
+
+#portfolio .portfolio-item .portfolio-caption .portfolio-caption-subheading {
+    font-style: italic;
+    margin-bottom: 12px;
+}
+
+#portfolio .portfolio-item .portfolio-caption .portfolio-link-external a{
+    margin-top: 10px;
+    color: var(--font-clr-light);
+    font-size: 0.8rem;
+}
+
+#portfolio .portfolio-item .portfolio-caption .portfolio-link-external a:hover {
+    cursor: pointer;
+    color: grey;
+}
+
+#portfolio .portfolio-item .portfolio-caption .portfolio-link-external a::after {
+    content: "  \2197";
+    font-size: 1rem;
+}
+
+@media (min-width: 1100px) {
+    #portfolio {
+        width: 100%;
+    }
+
+    #portfolio .section-heading {
+        font-size: 3rem;
+    }
+
+    #portfolio .section-subheading {
+        font-size: 2rem;
+        margin-bottom: 50px;
+    }
+
+    #portfolio .portfolio-item .portfolio-caption-heading {
+        font-size: 2.5rem;
+    }
+
+    #portfolio .portfolio-item .portfolio-caption-subheading {
+        font-size: 1.8rem;
+    }
+
+    #portfolio .portfolio-item .portfolio-caption .portfolio-link-external a{
+        font-size: 1rem;
+    }
+}
+
+/***************************** 
+    ABOUT ME SETTINGS  
+******************************/
+#about {
+    background-color: var(--clr-dark-1-background);
+    padding: 30px 60px 40px 60px;
+    font-size: 1rem;
+}
+
+#about .section-heading {
+    color: var(--font-clr-light);
+    padding-top: 80px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#about .section-subheading {
+    font-size: 2rem;
+    margin: 0 30px 60px 30px;
+}
+
+.timeline {
+    position: relative;
+    padding: 0;
+    list-style: none;
+}
+
+.timeline::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    width: 2px;
+    margin-left: -1.5px;
+    content: "";
+    background-color: #e9ecef;
+}
+
+.timeline > li {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 50px;
+}
+
+.timeline > li:after,
+.timeline > li:before {
+    display: table;
+    content: " ";
+}
+
+.timeline > li:after {
+    clear: both;
+}
+
+.timeline > li .timeline-panel {
+    position: relative;
+    float: right;
+    width: 100%;
+    padding: 0 20px 0 100px;
+    text-align: left;
+}
+
+.timeline > li .timeline-panel:before {
+    right: auto;
+    left: -15px;
+    border-right-width: 15px;
+    border-left-width: 0;
+}
+
+.timeline > li .timeline-panel:after {
+    right: auto;
+    left: 14px;
+    border-right-width: 14px;
+    border-left-width: 0;
+}
+
+.timeline .img-fluid {
+    height: 66px;
+    object-fit: cover;
+}
+
+.timeline > li .timeline-image {
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    margin-left: 0;
+    text-align: center;
+    color: white;
+    border: 7px solid #e9ecef;
+    border-radius: 100%;
+    background-color: var(--font-clr-theme);
+}
+
+.timeline > li .timeline-image h4 {
+    font-size: 10px;
+    line-height: 14px;
+    margin-top: 12px;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel {
+    float: right;
+    padding: 0 20px 0 100px;
+    text-align: left;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel:before {
+    right: auto;
+    left: -15px;
+    border-right-width: 15px;
+    border-left-width: 0;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel:after {
+    right: auto;
+    left: -14px;
+    border-right-width: 14px;
+    border-left-width: 0;
+}
+
+.timeline > li:last-child {
+    margin-bottom: 0;
+}
+
+.timeline .timeline-heading h4 {
+    margin-top: 0;
+    color: var(--font-clr-light);
+}
+
+.timeline .timeline-heading h4.subheading {
+    text-transform: none;
+    color: var(--clr-light-background)
+}
+
+.timeline .timeline-body > ul,
+.timeline .timeline-body > p {
+    margin-bottom: 0;
+}
+
+@media(min-width: 768px) {
+    #about .section-heading {
+        font-size: 3rem;
+    }
+
+    #about .section-subheading {
+        font-size: 2rem;
+    }
+
+    .timeline:before {
+        left: 50%;
+    }
+
+    .timeline > li {
+        min-height: 100px;
+        margin-bottom: 100px;
+    }
+
+    .timeline > li .timeline-panel {
+        float: left;
+        width: 41%;
+        padding: 0 20px 20px 30px;
+        text-align: right;
+    }
+
+    .timeline .img-fluid {
+        height: 86px;
+        object-fit: cover;
+    }
+
+    .timeline > li .timeline-image {
+        left: 50%;
+        width: 100px;
+        height: 100px;
+        margin-left: -50px;
+    }
+    
+    .timeline > li .timeline-image h4 {
+        font-size: 13px;
+        line-height: 18px;
+        margin-top: 16px;
+    }
+    
+    .timeline > li.timeline-inverted > .timeline-panel {
+        float: right;
+        padding: 0 30px 20px 20px;
+        text-align: left;
+        }
+}
+
+@media (min-width: 992px) {
+    .timeline > li {
+        min-height: 150px;
+    }
+
+    .timeline > li .timeline-panel {
+        padding: 0 20px 20px;
+    }
+
+    .timeline .img-fluid {
+        height: 136px;
+        object-fit: cover;
+    }
+
+    .timeline > li .timeline-image {
+        width: 150px;
+        height: 150px;
+        margin-left: -75px;
+    }
+
+    .timeline > li .timeline-image h4 {
+        font-size: 18px;
+        line-height: 26px;
+        margin-top: 30px;
+    }
+
+    .timeline > li.timeline-inverted > .timeline-panel {
+        padding: 0 20px 20px;
+    }
+}
+    
+@media (min-width: 1200px) {
+    .timeline > li {
+        min-height: 170px;
+    }
+
+    .timeline > li .timeline-panel {
+        padding: 0 20px 20px 100px;
+    }
+
+    .timeline .img-fluid {
+        height: 155px;
+        object-fit: cover;
+    }
+    
+    .timeline > li .timeline-image {
+        width: 170px;
+        height: 170px;
+        margin-left: -85px;
+    }
+
+    .timeline > li .timeline-image h4 {
+        margin-top: 40px;
+    }
+
+    .timeline > li.timeline-inverted > .timeline-panel {
+        padding: 0 100px 20px 20px;
+    }
+}
+
+/***************************** 
+    CONTACT ME SETTINGS  
 ******************************/
