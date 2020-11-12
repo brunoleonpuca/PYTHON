@@ -65,7 +65,7 @@ body {
     /* word-break: keep-all; */
     white-space: normal;
     position: relative;
-    left: -40px;
+    left: 0px;
 }
 
 #main-nav .navbar-nav .nav-item .nav-link {
@@ -85,7 +85,7 @@ body {
 }
 
 #main-nav #navbarResponsive {
-    margin-left: -85px;
+    margin-left: -65px;
 }
 
 @media (min-width: 992px) {
@@ -260,7 +260,7 @@ header.masthead #masthead-btn:hover {
     }
 
     #skills .row {
-        margin: auto 100px auto 100px;
+        margin: auto 20px auto 20px;
     }
 
     #skills .fa-stack {
@@ -651,7 +651,7 @@ header.masthead #masthead-btn:hover {
 
 section#contact {
     background-color: var(--clr-dark-3-background);
-    padding: 30px 60px 40px 60px;
+    padding: 30px 20px 40px 20px;
     font-size: 1rem;
 }
 
@@ -668,7 +668,7 @@ section#contact .section-subheading {
 }
 
 section#contact form#contactForm {
-    margin: auto 300px auto 300px;
+    margin: auto 50px auto 50px;
 }
 
 section#contact form#contactForm .form-group {
@@ -711,6 +711,12 @@ section#contact form#contactForm ::-moz-placeholder {
 
 section#contact form#contactForm :-ms-input-placeholder {
     font-weight: 700;
+}
+
+@media (min-width: 920px) {
+    section#contact form#contactForm {
+        margin: auto 300px auto 300px;
+    }
 }
 
 .footer {
