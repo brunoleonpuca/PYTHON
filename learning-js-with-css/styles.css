@@ -158,6 +158,7 @@ header.masthead {
 header.masthead .masthead-subheading {
     font-size: 5rem;
     font-style: italic;
+    letter-spacing: 1.3rem;
     line-height: 3.5rem;
     margin-bottom: 25px;
     margin-top: 0.5em;
@@ -188,8 +189,12 @@ header.masthead #masthead-btn:hover {
 
 @media (min-width: 768px) {
     header.masthead {
-        padding-top: 23rem;
+        padding-top: 26rem;
         padding-bottom: 8.5rem;
+    }
+
+    header .container {
+        margin-top: -12em;
     }
 
     header.masthead .masthead-subheading {
@@ -254,16 +259,20 @@ header.masthead #masthead-btn:hover {
         font-size: 2rem;
     }
 
+    #skills .row {
+        margin: auto 100px auto 100px;
+    }
+
     #skills .fa-stack {
         width: 6em;
     }
 
     #skills .skill-header {
-        font-size: 2rem;
+        font-size: 1.3rem;
     }
 
     #skills .skill-text {
-        font-size: 2rem;
+        font-size: 1rem;
     }
 }
 
@@ -639,3 +648,72 @@ header.masthead #masthead-btn:hover {
 /***************************** 
     CONTACT ME SETTINGS  
 ******************************/
+
+section#contact {
+    background-color: var(--clr-dark-3-background);
+    padding: 30px 60px 40px 60px;
+    font-size: 1rem;
+}
+
+section#contact .section-heading {
+    color: var(--font-clr-light);
+    padding-top: 80px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+section#contact .section-subheading {
+    font-size: 2rem;
+    margin: 0 30px 60px 30px;
+}
+
+section#contact form#contactForm {
+    margin: auto 300px auto 300px;
+}
+
+section#contact form#contactForm .form-group {
+    margin-bottom: 1.5rem;
+}
+
+section#contact form#contactForm .form-group input,
+section#contact form#contactForm .form-group textarea {
+    padding: 1.25rem;
+}
+section#contact form#contactForm .form-group input.form-control {
+    height: auto;
+}
+section#contact form#contactForm .form-group-textarea {
+    height: 100%;
+}
+section#contact form#contactForm .form-group-textarea textarea {
+    height: 100%;
+    min-height: 10rem;
+}
+section#contact form#contactForm p.help-block {
+    margin: 0;
+}
+section#contact form#contactForm .form-control:focus {
+    border-color: var(--clr-light-background);
+    box-shadow: none;
+}
+
+section#contact form#contactForm ::-webkit-input-placeholder {
+    font-weight: 700;
+}
+
+section#contact form#contactForm :-moz-placeholder {
+    font-weight: 700;
+}
+
+section#contact form#contactForm ::-moz-placeholder {
+    font-weight: 700;
+}
+
+section#contact form#contactForm :-ms-input-placeholder {
+    font-weight: 700;
+}
+
+.footer {
+    text-align: center;
+    font-size: 0.9rem;
+}
