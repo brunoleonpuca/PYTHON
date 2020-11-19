@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "intro-flask\\venv\\Scripts\\python.exe"
+    "python.pythonPath": "learning-js-with-css\\venv\\Scripts\\python.exe",
+    "git.ignoreLimitWarning": true
 }
