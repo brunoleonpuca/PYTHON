@@ -1,0 +1,240 @@
+{% extends 'base.html' %}
+
+{% block title %}Index{% endblock %}
+
+{% block header %}
+<h1>
+    {{ example }}
+</h1>
+{% endblock %}
+
+
+{% block general %}
+<a href="https://github.com/" target="_blank">Repos en general - Git Hub</a>
+<table class="table table-primary table-bordered table-sm table-hover">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Link</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Edyoda</td>
+            <td>Cursos semi-gratuitos</td>
+            <td><a href="https://www.edyoda.com/" target="_blank">Link</a></td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>MDBootstrap</td>
+            <td>Cosas de bootstrap muy utiles</td>
+            <td><a href="https://mdbootstrap.com/docs/jquery/layout/overview/" target="_blank">Link</a></td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Udemy</td>
+            <td>Mis cursos de Udemy</td>
+            <td><a href="https://www.udemy.com/home/my-courses/learning/" target="_blank">Link</a></td>
+        </tr>
+        <tr>
+            <th scope="row">4</th>
+            <td>Free Code Camp</td>
+            <td>Cursos y noticias de programacion, mil recursos buenos</td>
+            <td><a href="https://www.freecodecamp.org/news/" target="_blank">Link</a></td>
+        </tr>
+        <tr>
+            <th scope="row">5</th>
+            <td>Free Code Camp - YT</td>
+            <td>Cursos de FCC pero en YT, importante tambien</td>
+            <td><a href="https://www.youtube.com/c/Freecodecamp/videos?view=0&sort=p&flow=grid" target="_blank">Link</a></td>
+        </tr>
+        <tr>
+            <th scope="row">6</th>
+            <td>Proyecto Odin</td>
+            <td>Curso unico de proyecto que contiene todo lo necesario para el desarrollo full stack</td>
+            <td><a href="https://www.theodinproject.com/" target="_blank">Link</a></td>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}
+
+{% block backend %}
+<div class="col-6">
+    <!-- PYTHON -->
+    <h4>Python</h4>
+    <table class="table table-secondary table-bordered table-sm table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Pypi</td>
+                <td>Paquetes de Python</td>
+                <td><a href="https://pypi.org/" target="_blank">Link</a></td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td></td>
+                <td></td>
+                <td><a href="" target="_blank">Link</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="col-6">
+    <!-- FLASK -->
+    <h4>Flask</h4>
+    <table class="table table-success table-bordered table-sm table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Flask Blueprints</td>
+                <td>Blueprints de Flask, documentacion importante para crear rutas</td>
+                <td><a href="https://realpython.com/flask-blueprint/#what-a-flask-application-looks-like" target="_blank">Link</a></td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Documentacion Werkzeug</td>
+                <td>Documentacion de Werkzeug, paquete para el OAuth</td>
+                <td><a href="https://werkzeug.palletsprojects.com/en/1.0.x/tutorial/" target="_blank">Link</a></td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Documentacion Jinja</td>
+                <td>Documentacion de Jinja, paquete para crear esqueletos con herencia, funciones varias con Jinja tambien</td>
+                <td><a href="https://jinja.palletsprojects.com/en/2.11.x/templates/" target="_blank">Link</a></td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>Documentacion Jinja-Flash</td>
+                <td>Documentacion para comunicar mensajes de error, paquete Flash (get in flashed_messages bla bla)</td>
+                <td><a href="https://flask.palletsprojects.com/en/0.12.x/patterns/flashing/" target="_blank">Link</a></td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td>Video contact form & E-mail</td>
+                <td>Video donde conecta un form de 'contact me' con STMP de gmail</td>
+                <td><a href="https://www.youtube.com/watch?v=6VGu1CwCN2Y&ab_channel=Ahnaf" target="_blank">Link</a></td>
+            </tr>
+            <tr>
+                <th scope="row">6</th>
+                <td>Documentacion de contact form & E-mail</td>
+                <td>Documentacion para enviar mail con paquetes email y message y variables de entorno</td>
+                <td><a href="https://www.twilio.com/blog/2018/03/send-email-programmatically-with-gmail-python-and-flask.html" target="_blank">Link</a></td>
+            </tr>
+            <tr>
+                <th scope="row">7</th>
+                <td>Documentacion WTFORMS</td>
+                <td>Documentacion para enviar mail con paquete WTFORms (bastante mas complejo que el anterior)</td>
+                <td><a href="https://code.tutsplus.com/tutorials/intro-to-flask-adding-a-contact-page--net-28982" target="_blank">Link</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="w-100"></div>
+<div class="col-12">
+    <h4>C#</h4>
+    <table class="table table-danger table-bordered table-sm table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td></td>
+                <td></td>
+                <td><a href="" target="_blank">Link</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+
+{% block frontend %}
+<div class="col-6">
+    <h4>HTML</h4>
+    <table class="table table-warning table-bordered table-sm table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td></td>
+                <td></td>
+                <td><a href="" target="_blank">Link</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="col-6">
+    <h4>CSS</h4>
+    <table class="table table-info table-bordered table-sm table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td></td>
+                <td></td>
+                <td><a href="" target="_blank">Link</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="w-100"></div>
+<div class="col-12">
+    <h4>JS</h4>
+    <table class="table table-dark table-bordered table-sm table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td></td>
+                <td></td>
+                <td><a href="" target="_blank">Link</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}
